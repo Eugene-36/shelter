@@ -1,40 +1,40 @@
 @font-face {
-  font-family: "Circe";
-  font-style: normal;
+  font-family: "Montserrat";
+  font-style: Bold;
   font-weight: 700;
-  src: local("Circe Bold"),
-    url("../assets/fonts/circe-bold.ttf") format("truetype");
+  src: local("Montserrat Bold"),
+    url("../../assets/fonts/Montserrat-Bold.ttf") format("truetype");
 }
-
+/* ../assets/fonts/Montserrat-Bold.ttf */
 @font-face {
-  font-family: "Circe";
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  src: local("Circe Regular"),
-    url("../assets/fonts/circe.ttf") format("truetype");
+  src: local("Montserrat Regular"),
+    url("../../assets/fonts/Montserrat-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Poppins";
-  font-style: normal;
+  font-family: "Montserrat";
+  font-style: Bold;
   font-weight: 700;
-  src: local("Poppins Bold"),
-    url("../assets/fonts/Poppins-Bold.ttf") format("truetype");
+  src: local("Montserrat Bold"),
+    url("../../assets/fonts/Montserrat-Bold.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Poppins";
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  src: local("Poppins Regular"),
-    url("../assets/fonts/Poppins-Regular.ttf") format("truetype");
+  src: local("Montserrat Regular"),
+    url("../../assets/fonts/Montserrat-Regular.ttf") format("truetype");
 }
 
 body {
   margin: 0;
-  font-family: Poppins;
+  font-family: Montserrat;
   color: black;
-  font-family: Circe;
+  font-family: Montserrat;
   background-color: #e7eaf2;
   /* color: black; */
 }
