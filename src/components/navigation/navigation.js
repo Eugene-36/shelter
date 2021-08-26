@@ -1,6 +1,6 @@
 import React from 'react';
 import st from './navigation.module.css';
-console.log(st);
+import burger from '../icons/Burger.svg';
 
 function Navigation() {
   return (
@@ -34,11 +34,13 @@ function Navigation() {
             </li>
             <li className="item">
               <a href="" className="link link-underline">
-               Contacts
+                Contacts
               </a>
             </li>
           </ul>
         </nav>
+
+        <img height={22} src={burger} alt="" />
 
         {/* <div class="container header-mobil"> 
                 <button type="button" class="menu-button" aria-expanded="false" data-menu-button>

@@ -1,5 +1,5 @@
 import './App.css';
-import Check from './components/check/check';
+import Hero from './components/hero/hero'
 import s from '../src/components/styles/base.module.css';
 
 // Импорт компонентов
@@ -10,6 +10,7 @@ function App() {
   return (
     <div className={s.container}>
       <Navigation />
+      <Hero/>
     </div>
   );
 }
