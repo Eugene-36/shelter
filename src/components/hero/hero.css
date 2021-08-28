@@ -1,0 +1,45 @@
+.section-hero {
+  margin-top: 60px;
+  /* background: url(noise_lines_transparent@2X.png), */
+  background: radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%),
+    #211f20;
+}
+.text {
+  margin-top: 42px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 160%;
+
+  color: #cdcdcd;
+}
+.button {
+  margin-top: 42px;
+  padding: 15px 45px;
+
+  width: 207px;
+  height: 52px;
+
+  background: #f1cdb3;
+  outline: none;
+  border-radius: 100px;
+  border: none;
+}
+.button-text {
+  color: #292929;
+
+  font-weight: 400;
+  line-height: 22px;
+
+  border: 0;
+}
+.hero-text {
+  font-size: 25px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+}
+.main-dog {
+  margin-top: 105px;
+  margin-left: 40px;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import st from './navigation.module.css';
+import './navigation.css';
 import burger from '../icons/Burger.svg';
 
 function Navigation() {
@@ -7,13 +7,17 @@ function Navigation() {
     <header className="page-header">
       <div className="container-head nav-info">
         <nav className="navigation">
-          <div>
-            <a href="./index.html" className="logo link-underline">
-              Cozy <span className="color-logo">House</span>
-            </a>
-            <span className="color-logo">Shelter for pets in Boston</span>
+          <div className="logo-position">
+            <div className="under">
+              <a href="./index.html" className="logo link-underline">
+                <span className="cozy-style">
+                Cozy  House
+                </span>
+              </a>
+              <span className="subtitle">Shelter for pets in Boston</span>
+            </div>
           </div>
-          <ul className="site-nav list">
+          {/* <ul className={'site-nav list'}>
             <li className="item">
               <a href="./index.html" className="link link-underline">
                 About the shelter
@@ -37,10 +41,10 @@ function Navigation() {
                 Contacts
               </a>
             </li>
-          </ul>
+          </ul> */}
         </nav>
 
-        <img height={22} src={burger} alt="" />
+        <img className="burger" height={22} src={burger} alt="" />
 
         {/* <div class="container header-mobil"> 
                 <button type="button" class="menu-button" aria-expanded="false" data-menu-button>
