@@ -1,0 +1,77 @@
+.back {
+  padding-top: 42px;
+  background-color: #f6f6f6;
+}
+.list {
+  list-style: none;
+}
+
+.cart {
+  width: 270px;
+  min-height: 435px;
+  margin-top: 42px;
+  margin-left: 25px;
+  background: #fafafa;
+}
+.bt {
+  border: 2px solid #f1cdb3;
+  box-sizing: border-box;
+  border-radius: 100px;
+  align-items: center;
+
+  padding: 15px 45px;
+  margin-top: 42px;
+  margin-bottom: 30px;
+}
+.text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 130%;
+
+  letter-spacing: 0.06em;
+  color: #292929;
+}
+.posBtn {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  overflow: hidden;
+}
+.getToknow {
+  padding: 15px 45px;
+
+  width: 260px;
+  height: 52px;
+
+  background: #f1cdb3;
+  border-radius: 100px;
+  border: none;
+  margin-top: 42px;
+  margin-bottom: 42px;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #f1cdb3;
+  border-radius: 50%;
+}
+.arrow {
+  margin-top: 15px;
+}
+.sectionTitleInfo {
+  margin-top: 30px;
+}
+.headText {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 130%;
+
+  display: flex;
+
+  letter-spacing: 0.06em;
+
+  color: #545454;
+}

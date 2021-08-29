@@ -1,0 +1,15 @@
+.list {
+  list-style: none;
+}
+.textHelp {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 130%;
+
+  display: flex;
+
+  letter-spacing: 0.02em;
+
+  color: #545454;
+}
