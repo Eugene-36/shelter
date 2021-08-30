@@ -6,15 +6,42 @@ function Help() {
       <section>
         <h2 className={s.textHelp}>How you can help our shelter</h2>
         <ul className={s.list}>
-          <li>Pet food</li>
-          <li>Transportation</li>
-          <li>Toys</li>
-          <li>Bowls and cups</li>
-          <li>Shampoos</li>
-          <li>Vitamins</li>
-          <li>Medicines</li>
-          <li>Collars / leashes</li>
-          <li>Sleeping areas</li>
+          <li>
+            <img src="" alt="" />
+            <p>Pet food</p>
+          </li>
+          <li>
+            <img src="" alt="" />
+            <p>Transportation</p>
+          </li>
+          <li>
+            <img src="" alt="" />
+            <p>Toys</p>
+          </li>
+          <li>
+            <img src="" alt="" />
+            <p>Bowls and cups</p>
+          </li>
+          <li>
+            <img src="" alt="" />
+            <p>Shampoos</p>
+          </li>
+          <li>
+            <img src="" alt="" />
+            <p>Vitamins</p>
+          </li>
+          <li>
+            <img src="" alt="" />
+            <p>Medicines</p>
+          </li>
+          <li>
+            <img src="" alt="" />
+            <p>Collars / leashes</p>
+          </li>
+          <li>
+            <img src="" alt="" />
+            <p>Sleeping areas</p>
+          </li>
         </ul>
       </section>
     </>
