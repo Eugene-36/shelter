@@ -1,0 +1,99 @@
+.lay {
+  background: radial-gradient(
+      110.67% 538.64% at 5.73% 50%,
+      #513d2f 0%,
+      #1a1a1c 100%
+    ),
+    #211f20;
+}
+.mainText {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 130%;
+
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  color: #ffffff;
+}
+.email {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 115%;
+  margin-left: 20px;
+
+  letter-spacing: 0.06em;
+
+  color: #f1cdb3;
+}
+.phone {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 115%;
+  margin-left: 40px;
+
+  letter-spacing: 0.06em;
+
+  color: #f1cdb3;
+}
+.blockContact {
+  display: flex;
+
+  flex-flow: row-reverse;
+
+  justify-content: center;
+}
+.blockFooter {
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+div > .blockContact:first-child {
+  margin-bottom: 40px;
+}
+.contactsSection {
+  margin-top: 40px;
+}
+.visitSection {
+  margin-top: 40px;
+}
+.visitSectionText {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 130%;
+
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  color: #ffffff;
+}
+.textAdress {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 115%;
+
+  letter-spacing: 0.06em;
+  /* margin-left: 20px; */
+
+  color: #f1cdb3;
+}
+
+.blockAdress {
+  display: flex;
+  flex-flow: row-reverse;
+  justify-content: flex-end;
+}
+.imgGap {
+  margin-right: 20px;
+}
+div > .blockAdress {
+  margin-top: 40px;
+  margin-left: 5px;
+}
+.footerPuppy {
+  margin-top: 40px;
+}

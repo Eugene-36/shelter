@@ -1,0 +1,45 @@
+.section {
+  background: #f6f6f6;
+  padding-bottom: 40px;
+}
+.head {
+  margin-top: 42px;
+}
+
+.mainText {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 130%;
+
+  letter-spacing: 0.06em;
+
+  color: #545454;
+}
+.spanText {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 160%;
+
+  color: #545454;
+}
+.inp {
+  margin-top: 20px;
+}
+
+.fr,
+.descriprion {
+  margin-top: 20px;
+}
+.descriprion {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+
+  color: #b2b2b2;
+}
+.donationDog {
+  margin-top: 42px;
+}

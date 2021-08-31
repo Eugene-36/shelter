@@ -24,14 +24,16 @@
   letter-spacing: 0.06em;
   color: #f1cdb3;
 }
-.subtitle{
- font-style: normal;
-font-weight: normal;
-font-size: 13px;
+.subtitle {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
 
-letter-spacing: 0.1em;
-color: #FFFFFF; 
-/* ! Не забудь поставить белый цвет, когда сделаешь background */
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  /* ! Не забудь поставить белый цвет, когда сделаешь background */
 }
-
-
+.container-head {
+  padding-top: 30px;
+  margin-left: 10px;
+}

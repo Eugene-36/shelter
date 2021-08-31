@@ -1,5 +1,7 @@
 .list {
   list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 .textHelp {
   font-style: normal;
@@ -12,4 +14,13 @@
   letter-spacing: 0.02em;
 
   color: #545454;
+}
+.posititon {
+  margin-top: 30px;
+}
+.text {
+  margin-top: 20px;
+}
+.top {
+  padding-top: 42px;
 }
