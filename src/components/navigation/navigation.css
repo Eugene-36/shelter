@@ -13,6 +13,7 @@
 .burger {
   margin-left: 45px;
 }
+
 .subtitle {
   margin-top: 10px;
 }
@@ -36,4 +37,37 @@
 .container-head {
   padding-top: 30px;
   margin-left: 10px;
+}
+.link {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 160%;
+
+  color: #cdcdcd;
+}
+li:nth-last-child(n + 2) {
+  margin-right: 25px;
+}
+/* ! Тут пошла рыгать адаптивка  */
+/* display: flex; надо дать на navigation */
+
+@media (min-width: 320px) {
+  .site-nav {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+  .site-nav {
+    display: block;
+    display: flex;
+    margin-left: 62px;
+    align-items: center;
+  }
+  .navigation {
+    display: flex;
+  }
 }

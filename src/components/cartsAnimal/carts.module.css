@@ -75,3 +75,47 @@
 
   color: #545454;
 }
+
+/* ? А вот и Таджики подъехали */
+@media (min-width: 320px) {
+  .cartSecond {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .cartSecond {
+    width: 270px;
+    min-height: 435px;
+    margin-top: 42px;
+    margin-left: 25px;
+
+    display: block;
+    background: #fafafa;
+  }
+  .name {
+    margin-top: 30px;
+  }
+  .btn {
+    border: 2px solid #f1cdb3;
+    box-sizing: border-box;
+    border-radius: 100px;
+    align-items: center;
+
+    padding: 15px 45px;
+    margin-top: 42px;
+    margin-bottom: 30px;
+  }
+  .textInside {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 130%;
+
+    letter-spacing: 0.06em;
+    color: #292929;
+  }
+  .commonBlock {
+    display: flex;
+  }
+}

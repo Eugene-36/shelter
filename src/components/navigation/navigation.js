@@ -10,14 +10,12 @@ function Navigation() {
           <div className="logo-position">
             <div className="under">
               <a href="./index.html" className="logo link-underline">
-                <span className="cozy-style">
-                Cozy  House
-                </span>
+                <span className="cozy-style">Cozy House</span>
               </a>
               <span className="subtitle">Shelter for pets in Boston</span>
             </div>
           </div>
-          {/* <ul className={'site-nav list'}>
+          <ul className={'site-nav list'}>
             <li className="item">
               <a href="./index.html" className="link link-underline">
                 About the shelter
@@ -41,7 +39,7 @@ function Navigation() {
                 Contacts
               </a>
             </li>
-          </ul> */}
+          </ul>
         </nav>
 
         <img className="burger" height={22} src={burger} alt="" />

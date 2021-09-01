@@ -11,8 +11,44 @@
   font-size: 25px;
   line-height: 130%;
   letter-spacing: 0.06em;
+
+  margin-bottom: 25px;
+
   color: #545454;
 }
+@media (min-width: 768px) {
+  .sectionTitle {
+    margin-bottom: 0px;
+  }
+}
+
 .text {
   margin-bottom: 22px;
+}
+
+@media (min-width: 768px) {
+  .text {
+    width: 430px;
+    text-align: justify;
+  }
+  .blockText {
+    display: flex;
+    justify-content: center;
+  }
+  .listQualitiesText {
+    text-align: initial;
+
+    display: flex;
+    justify-content: center;
+  }
+  .iconAntenna {
+    display: flex;
+    flex-direction: column;
+
+    align-items: baseline;
+  }
+
+  .blockText:nth-child(2) {
+    margin-top: 20px;
+  }
 }

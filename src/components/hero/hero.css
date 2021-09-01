@@ -43,3 +43,30 @@
   margin-top: 105px;
   margin-left: 40px;
 }
+
+/* ! адаптивка */
+@media (min-width: 768px) {
+  .hero-text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 44px;
+    line-height: 130%;
+
+    display: flex;
+    text-align: left;
+    justify-content: center;
+
+    color: #ffffff;
+  }
+  .text {
+    width: 400px;
+    text-align: initial;
+  }
+  .container-text {
+    display: flex;
+    justify-content: center;
+  }
+  .main-dog {
+    width: 569px;
+  }
+}
