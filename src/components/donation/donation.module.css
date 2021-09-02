@@ -4,18 +4,17 @@
 }
 .head {
   margin-top: 42px;
+  padding-top: 80px;
 }
 
 .mainText {
   font-style: normal;
   font-weight: normal;
-  font-size: 25px;
-  line-height: 130%;
-
-  letter-spacing: 0.06em;
-
   color: #545454;
-}
+
+  align-items: center;
+  letter-spacing: 0;
+} 
 .spanText {
   font-style: normal;
   font-weight: normal;
@@ -42,4 +41,27 @@
 }
 .donationDog {
   margin-top: 42px;
+}
+
+/*? Адаптивочка подъехала  */
+
+@media (min-width: 768px) {
+  .mainBlockDonation {
+    width: 380px;
+    text-align: initial;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mainText {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 130%;
+    align-items: center;
+    letter-spacing: 0;
+  }
+  .donationDog {
+    width: 505px;
+  }
 }

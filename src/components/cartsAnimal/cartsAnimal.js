@@ -7,9 +7,11 @@ import right from '../icons/arrow-right (2).svg';
 function Carts() {
   return (
     <section className={s.back}>
-      <h2 className={s.headText}>Our friends who are looking for a house</h2>
+      <h2 className={s.headText}>
+        Our friends who <br /> are looking for a house
+      </h2>
       <ul className={s.list}>
-        <li>
+        <li className={s.item}>
           <div className={s.commonBlock}>
             <div className={s.cart}>
               <img src={katrine} alt="" />
@@ -31,7 +33,7 @@ function Carts() {
             <div className={s.circle}>
               <img src={left} alt="" className={s.arrow} />
             </div>
-            <div className={s.circle}>
+            <div className={s.circleSecond}>
               <img src={right} alt="" className={s.arrow} />
             </div>
           </div>

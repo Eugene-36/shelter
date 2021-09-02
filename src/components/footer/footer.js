@@ -8,8 +8,10 @@ function Footer() {
   return (
     <section className={s.lay}>
       <div className={s.blockFooter}>
-        <h2 className={s.mainText}>For questions and suggestions</h2>
         <div className={s.contactsSection}>
+          <h2 className={s.mainText}>
+            For questions <br /> and suggestions
+          </h2>
           <div className={s.blockContact}>
             <a href="" className={s.email}>
               email@shelter.com
@@ -24,10 +26,12 @@ function Footer() {
           </div>
         </div>
         <div className={s.visitSection}>
-          <h2 className={s.visitSectionText}>We are waiting for your visit</h2>
+          <h2 className={s.visitSectionText}>
+            We are waiting <br /> for your visit
+          </h2>
           <div className={s.blockAdress}>
             <a href="" className={s.textAdress}>
-              1 Central Street, Boston (entrance from the store)
+              1 Central Street, Boston <br /> (entrance from the store)
             </a>
             <img src={pin} alt="" />
           </div>
@@ -38,8 +42,8 @@ function Footer() {
             <img src={pin} alt="" className={s.imgGap} />
           </div>
         </div>
-        <img src={footerPet} alt="" className={s.footerPuppy} />
       </div>
+      <img src={footerPet} alt="" className={s.footerPuppy} />
     </section>
   );
 }

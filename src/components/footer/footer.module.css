@@ -43,6 +43,7 @@
   display: flex;
 
   flex-flow: row-reverse;
+  margin-top: 40px;
 
   justify-content: center;
 }
@@ -96,4 +97,33 @@ div > .blockAdress {
 }
 .footerPuppy {
   margin-top: 40px;
+}
+
+/*? Адаптивочка подъехала */
+
+@media (min-width: 768px) {
+  .blockFooter {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .contactsSection,
+  .visitSection {
+    margin-top: 0;
+    margin-right: 60px;
+  }
+
+  div > .blockAdress {
+    margin-top: 33px;
+    margin-left: 5px;
+  }
+  .blockContact {
+    margin-top: 33px;
+  }
+  .footerPuppy {
+    width: 300px;
+  }
+  .phone {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }

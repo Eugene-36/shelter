@@ -8,8 +8,8 @@
   font-weight: normal;
   font-size: 25px;
   line-height: 130%;
-
-  display: flex;
+  /* 
+  display: flex; */
 
   letter-spacing: 0.02em;
 
@@ -23,4 +23,20 @@
 }
 .top {
   padding-top: 42px;
+}
+
+/*? Адаптивочка */
+@media (min-width: 768px) {
+  .list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  li:nth-last-child(7) {
+    margin-top: 0px;
+  }
+  li:nth-last-child(1) {
+    margin-right: 25px;
+  }
 }

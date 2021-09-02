@@ -13,7 +13,9 @@ function Help() {
   return (
     <>
       <section className={s.top}>
-        <h2 className={s.textHelp}>How you can help our shelter</h2>
+        <h2 className={s.textHelp}>
+          How you can help <br /> our shelter
+        </h2>
         <ul className={s.list}>
           <li>
             <img src={food} alt="" />
