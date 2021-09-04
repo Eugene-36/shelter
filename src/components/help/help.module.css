@@ -32,9 +32,9 @@
   .posititon {
     width: 120px;
   }
-  li:nth-last-child(n + 2) {
+  /* li:nth-last-child(n + 2) {
     margin-right: 0px;
-  }
+  } */
 }
 
 /*? Адаптивочка */

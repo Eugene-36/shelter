@@ -54,7 +54,7 @@
   .siteNav {
     display: none;
   }
-  li:nth-last-child(n + 2) {
+  .item {
     margin-right: 25px;
   }
 }
@@ -71,9 +71,12 @@
   .navigation {
     display: flex;
   }
-  li:nth-last-child(n + 2) {
+  /* .item {
     margin-right: 25px;
-  }
+  } */
+  /* li:nth-last-child(n + 2) {
+    margin-right: 25px;
+  } */
 }
 
 @media (min-width: 1280px) {

@@ -16,22 +16,22 @@ function Navigation() {
             </div>
           </div>
           <ul className={s.siteNav}>
-            <li className="item">
+            <li className={s.item}>
               <a href="./index.html" className={s.link}>
                 About the shelter
               </a>
             </li>
-            <li className="item">
+            <li className={s.item}>
               <a href="./portfolio.html" className={s.link}>
                 Our pets
               </a>
             </li>
-            <li className="item">
+            <li className={s.item}>
               <a href="" className={s.link}>
                 Help the shelter
               </a>
             </li>
-            <li className="item">
+            <li className={s.item}>
               <a href="" className={s.link}>
                 Contacts
               </a>
