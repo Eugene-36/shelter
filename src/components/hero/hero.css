@@ -70,3 +70,19 @@
     width: 569px;
   }
 }
+
+@media (min-width: 1280px) {
+  .main-dog {
+    width: 698px;
+    margin-top: 0;
+  }
+  .flexContainer {
+    display: flex;
+  }
+  .text {
+    width: 520px;
+  }
+  .newContainer {
+    margin-left: 20px;
+  }
+}

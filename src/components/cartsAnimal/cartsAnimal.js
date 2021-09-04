@@ -27,6 +27,13 @@ function Carts() {
                 <span className={s.textInside}>Learn more</span>{' '}
               </button>
             </div>
+            <div className={s.cartThird}>
+              <img src={katrine} alt="" />
+              <h3 className={s.name}>Katrine</h3>
+              <button className={s.btn}>
+                <span className={s.textInside}>Learn more</span>{' '}
+              </button>
+            </div>
           </div>
           <div className={s.posBtn}>
             {/* <ArrowLeft /> */}

@@ -17,11 +17,11 @@ function Help() {
           How you can help <br /> our shelter
         </h2>
         <ul className={s.list}>
-          <li>
+          <li className={s.posititon}>
             <img src={food} alt="" />
             <p className={s.text}>Pet food</p>
           </li>
-          <li>
+          <li className={s.posititon}>
             <img src={car} alt="" />
             <p className={s.text}>Transportation</p>
           </li>
@@ -37,6 +37,7 @@ function Help() {
             <img src={shampoos} alt="" />
             <p className={s.text}>Shampoos</p>
           </li>
+
           <li className={s.posititon}>
             <img src={vitamins} alt="" />
             <p className={s.text}>Vitamins</p>

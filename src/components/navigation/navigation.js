@@ -1,48 +1,45 @@
 import React from 'react';
-import './navigation.css';
+import s from './navigation.module.css';
 import burger from '../icons/Burger.svg';
 
 function Navigation() {
   return (
     <header className="page-header">
-      <div className="container-head nav-info">
-        <nav className="navigation">
+      <div className={s.containerHead}>
+        <nav className={s.navigation}>
           <div className="logo-position">
-            <div className="under">
+            <div className={s.under}>
               <a href="./index.html" className="logo link-underline">
-                <span className="cozy-style">Cozy House</span>
+                <span className={s.cozyStyle}>Cozy House</span>
               </a>
-              <span className="subtitle">Shelter for pets in Boston</span>
+              <span className={s.subtitle}>Shelter for pets in Boston</span>
             </div>
           </div>
-          <ul className={'site-nav list'}>
+          <ul className={s.siteNav}>
             <li className="item">
-              <a href="./index.html" className="link link-underline">
+              <a href="./index.html" className={s.link}>
                 About the shelter
               </a>
             </li>
             <li className="item">
-              <a
-                href="./portfolio.html"
-                className="link current link-underline"
-              >
+              <a href="./portfolio.html" className={s.link}>
                 Our pets
               </a>
             </li>
             <li className="item">
-              <a href="" className="link link-underline">
+              <a href="" className={s.link}>
                 Help the shelter
               </a>
             </li>
             <li className="item">
-              <a href="" className="link link-underline">
+              <a href="" className={s.link}>
                 Contacts
               </a>
             </li>
           </ul>
         </nav>
 
-        <img className="burger" height={22} src={burger} alt="" />
+        <img className={s.burger} height={22} src={burger} alt="" />
 
         {/* <div class="container header-mobil"> 
                 <button type="button" class="menu-button" aria-expanded="false" data-menu-button>

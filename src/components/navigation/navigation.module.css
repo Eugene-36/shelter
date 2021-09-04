@@ -1,4 +1,4 @@
-.site-nav {
+.siteNav {
   list-style: none;
   margin: 0;
 }
@@ -7,7 +7,7 @@
   flex-direction: column;
 }
 
-.container-head {
+.containerHead {
   display: flex;
 }
 .burger {
@@ -17,7 +17,7 @@
 .subtitle {
   margin-top: 10px;
 }
-.cozy-style {
+.cozyStyle {
   font-style: normal;
   font-weight: normal;
   font-size: 32px;
@@ -34,7 +34,7 @@
   color: #ffffff;
   /* ! Не забудь поставить белый цвет, когда сделаешь background */
 }
-.container-head {
+.containerHead {
   padding-top: 30px;
   margin-left: 10px;
 }
@@ -46,22 +46,23 @@
 
   color: #cdcdcd;
 }
-li:nth-last-child(n + 2) {
-  margin-right: 25px;
-}
+
 /* ! Тут пошла рыгать адаптивка  */
 /* display: flex; надо дать на navigation */
 
 @media (min-width: 320px) {
-  .site-nav {
+  .siteNav {
     display: none;
+  }
+  li:nth-last-child(n + 2) {
+    margin-right: 25px;
   }
 }
 @media (min-width: 768px) {
   .burger {
     display: none;
   }
-  .site-nav {
+  .siteNav {
     display: block;
     display: flex;
     margin-left: 62px;
@@ -69,5 +70,14 @@ li:nth-last-child(n + 2) {
   }
   .navigation {
     display: flex;
+  }
+  li:nth-last-child(n + 2) {
+    margin-right: 25px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .siteNav {
+    margin-left: 550px;
   }
 }

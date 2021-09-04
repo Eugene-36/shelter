@@ -4,7 +4,7 @@ import whitePet from '../icons/about-pets.png';
 function AboutShelter() {
   return (
     <section className={s.sectionAbout}>
-      <div className="container bg ">
+      <div className={s.containerAb  }>
         {/* <h2 className={s.sectionTitle}>
           About the shelter <br />
           “Cozy House”
