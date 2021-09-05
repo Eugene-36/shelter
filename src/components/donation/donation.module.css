@@ -14,7 +14,7 @@
 
   align-items: center;
   letter-spacing: 0;
-} 
+}
 .spanText {
   font-style: normal;
   font-weight: normal;
@@ -63,5 +63,18 @@
   }
   .donationDog {
     width: 505px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .head {
+    display: flex;
+    flex-flow: row-reverse;
+    /* margin-left: auto; */
+    justify-content: center;
+  }
+  .mainBlockDonation {
+    margin-left: 30px;
+    margin-right: 0px;
   }
 }

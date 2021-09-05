@@ -1,0 +1,88 @@
+.siteNav {
+  list-style: none;
+  margin: 0;
+}
+.under {
+  display: flex;
+  flex-direction: column;
+}
+
+.containerHead {
+  display: flex;
+}
+.burger {
+  margin-left: 45px;
+}
+
+.subtitle {
+  margin-top: 10px;
+}
+.cozyStyle {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+.subtitle {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+
+  letter-spacing: 0.1em;
+  color: #545454;
+  /* ! Не забудь поставить белый цвет, когда сделаешь background */
+}
+.containerHead {
+  padding-top: 30px;
+  margin-left: 10px;
+}
+.link {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 160%;
+
+  color: #545454;
+}
+.navigation {
+  padding-bottom: 30px;
+}
+/* ! Тут пошла рыгать адаптивка  */
+/* display: flex; надо дать на navigation */
+
+@media (min-width: 320px) {
+  .siteNav {
+    display: none;
+  }
+  .item {
+    margin-right: 25px;
+  }
+}
+@media (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+  .siteNav {
+    display: block;
+    display: flex;
+    margin-left: 62px;
+    align-items: center;
+  }
+  .navigation {
+    display: flex;
+  }
+  /* .item {
+      margin-right: 25px;
+    } */
+  /* li:nth-last-child(n + 2) {
+      margin-right: 25px;
+    } */
+}
+
+@media (min-width: 1280px) {
+  .siteNav {
+    margin-left: 550px;
+  }
+}

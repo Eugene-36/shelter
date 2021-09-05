@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './navigation.module.css';
 import burger from '../icons/Burger.svg';
-
+import { Link } from 'react-router-dom';
 function Navigation() {
   return (
     <header className="page-header">
@@ -17,24 +17,24 @@ function Navigation() {
           </div>
           <ul className={s.siteNav}>
             <li className={s.item}>
-              <a href="./index.html" className={s.link}>
+              <Link to="/" className={s.link}>
                 About the shelter
-              </a>
+              </Link>
             </li>
             <li className={s.item}>
-              <a href="./portfolio.html" className={s.link}>
+              <Link to="/pets" className={s.link}>
                 Our pets
-              </a>
+              </Link>
             </li>
             <li className={s.item}>
-              <a href="" className={s.link}>
+              <Link to="/help" className={s.link}>
                 Help the shelter
-              </a>
+              </Link>
             </li>
             <li className={s.item}>
-              <a href="" className={s.link}>
+              <Link to="/contacts" className={s.link}>
                 Contacts
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -110,3 +110,17 @@ export default Navigation;
 // </ul>
 // </div>
 // </header>
+
+{/* <nav>
+  <ul>
+    <li>
+      <Link to="/">Home</Link>
+    </li>
+    <li>
+      <Link to="/about">About</Link>
+    </li>
+    <li>
+      <Link to="/users">Users</Link>
+    </li>
+  </ul>
+</nav>; */}

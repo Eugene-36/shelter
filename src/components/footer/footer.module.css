@@ -127,3 +127,13 @@ div > .blockAdress {
     margin-right: 20px;
   }
 }
+@media (min-width: 1280px) {
+  .lay {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 40px;
+  }
+  .footerPuppy {
+    margin-top: 0px;
+  }
+}
