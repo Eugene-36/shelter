@@ -1,0 +1,314 @@
+.back {
+  padding-top: 42px;
+  background-color: #f6f6f6;
+  padding-bottom: 60px;
+}
+.list {
+  list-style: none;
+}
+
+.cart {
+  width: 270px;
+  min-height: 435px;
+  margin-top: 42px;
+  margin-left: 25px;
+  background: #fafafa;
+}
+.bt {
+  border: 2px solid #f1cdb3;
+  box-sizing: border-box;
+  border-radius: 100px;
+  align-items: center;
+
+  padding: 15px 45px;
+  margin-top: 42px;
+  margin-bottom: 30px;
+}
+.text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 130%;
+
+  letter-spacing: 0.06em;
+  color: #292929;
+}
+/* .posBtn {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    overflow: hidden;
+  
+    position: relative;
+    height: 50px;
+  } */
+@media (min-width: 320px) {
+  .posBtn {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    overflow: hidden;
+
+    position: relative;
+    height: 50px;
+  }
+}
+/* .getToknow {
+  padding: 15px 45px;
+
+  width: 260px;
+  height: 52px;
+
+  background: #f1cdb3;
+  border-radius: 100px;
+  border: none;
+  margin-top: 42px;
+  margin-bottom: 42px;
+} */
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #cdcdcd;
+  border-radius: 50%;
+
+  position: absolute;
+  left: 5%;
+}
+.circleLeftSide {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #cdcdcd;
+  border-radius: 50%;
+
+  position: absolute;
+  right: 65%;
+}
+.circleSecond {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #f1cdb3;
+  border-radius: 50%;
+
+  position: absolute;
+  right: 5%;
+}
+.circleThird {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #f1cdb3;
+  border-radius: 50%;
+
+  position: absolute;
+  left: 65%;
+}
+.circleCenter {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #f1cdb3;
+  background-color: #f1cdb3;
+  border-radius: 50%;
+
+  position: absolute;
+  left: 43%;
+}
+.digit {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+/*  */
+.arrow {
+  margin-top: 15px;
+}
+.sectionTitleInfo {
+  margin-top: 30px;
+  color: #545454;
+}
+.headText {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 130%;
+
+  display: flex;
+  justify-content: center;
+
+  letter-spacing: 0.06em;
+
+  color: #545454;
+}
+
+/* ? А вот и Таджики подъехали */
+@media (min-width: 320px) {
+  .cart:nth-child(-n + 5) {
+    display: none;
+  }
+  /* .cartSecond,
+  .cartThird {
+    margin-top: 30px;
+    width: 270px;
+    min-height: 435px;
+    margin-top: 42px;
+    margin-left: 25px;
+    background: #fafafa;
+  }
+  .name {
+    margin-top: 30px;
+    color: #545454;
+  }
+  .btn {
+    border: 2px solid #f1cdb3;
+    box-sizing: border-box;
+    border-radius: 100px;
+    align-items: center;
+    padding: 15px 45px;
+    margin-top: 42px;
+    margin-bottom: 30px;
+  } */
+}
+
+@media (min-width: 768px) {
+  .cart:nth-child(-n + 3) {
+    display: block;
+  }
+  .cartSecond {
+    width: 270px;
+    min-height: 435px;
+    margin-top: 42px;
+    margin-left: 25px;
+
+    display: block;
+    background: #fafafa;
+  }
+  .circleCenter {
+    left: 50%;
+  }
+  .circleLeftSide {
+    right: 55%;
+  }
+  .circleThird {
+    left: 60%;
+  }
+  .name {
+    margin-top: 30px;
+    color: #545454;
+  }
+  .btn {
+    border: 2px solid #f1cdb3;
+    box-sizing: border-box;
+    border-radius: 100px;
+    align-items: center;
+
+    padding: 15px 45px;
+    margin-top: 42px;
+    margin-bottom: 30px;
+  }
+  .textInside {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 130%;
+
+    letter-spacing: 0.06em;
+    color: #292929;
+  }
+  .commonBlock {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 768px) {
+  .item {
+    position: relative;
+  }
+  .circle {
+    position: absolute;
+    /* top: 30%; */
+    /* left: 20%; */
+    left: 30%;
+  }
+  .circleSecond {
+    position: absolute;
+    /* top: 30%; */
+    right: 25%;
+  }
+
+  .posBtn {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    overflow: hidden;
+
+    position: initial;
+    height: 0px;
+  }
+  .cartThird {
+    display: none;
+  }
+}
+@media (min-width: 1280px) {
+  .cart:nth-child(-n + 5) {
+    display: block;
+  }
+  .circle {
+    position: absolute;
+    left: 40%;
+  }
+  .circleSecond {
+    position: absolute;
+    right: 37%;
+  }
+  .circleThird {
+    left: 55%;
+  }
+  .circleLeftSide {
+    right: 52%;
+  }
+  /* .cartThird {
+    width: 270px;
+    min-height: 435px;
+    margin-top: 42px;
+    margin-left: 25px;
+
+    display: block;
+    background: #fafafa;
+  }
+  .name {
+    margin-top: 30px;
+    color: #545454;
+  } */
+  .btn {
+    border: 2px solid #f1cdb3;
+    box-sizing: border-box;
+    border-radius: 100px;
+    align-items: center;
+
+    padding: 15px 45px;
+    margin-top: 42px;
+    margin-bottom: 30px;
+  }
+  .textInside {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 130%;
+
+    letter-spacing: 0.06em;
+    color: #292929;
+  }
+  .commonBlock {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* .ourPetsCarts_cart__3GBZ0 {
+    width: 270px;
+    min-height: 435px;
+    margin-top: 42px;
+    margin-left: 25px;
+    background: #fafafa;
+} */

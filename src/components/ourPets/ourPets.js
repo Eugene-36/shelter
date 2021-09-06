@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import burger from '../icons/Burger.svg';
 import s from './ourPets.module.css';
 import Footer from '../footer/footer';
+import OurPetsCarts from '../ourOetsCarts/ourPetsCarts';
 function OurPets() {
   return (
     <div className={s.backPets}>
@@ -44,6 +45,7 @@ function OurPets() {
           <img className={s.burger} height={22} src={burger} alt="" />
         </div>
       </header>
+      <OurPetsCarts />
       <Footer />
     </div>
   );
