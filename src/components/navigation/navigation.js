@@ -4,10 +4,10 @@ import burger from '../icons/Burger.svg';
 import { Link } from 'react-router-dom';
 function Navigation() {
   return (
-    <header className="page-header">
+    <header className="#">
       <div className={s.containerHead}>
         <nav className={s.navigation}>
-          <div className="logo-position">
+          <div className={s.logoPosition}>
             <div className={s.under}>
               <a href="./index.html" className="logo link-underline">
                 <span className={s.cozyStyle}>Cozy House</span>

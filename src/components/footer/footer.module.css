@@ -104,12 +104,13 @@ div > .blockAdress {
 @media (min-width: 768px) {
   .blockFooter {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
   }
   .contactsSection,
   .visitSection {
     margin-top: 0;
-    margin-right: 60px;
+    /* margin-right: 60px; */
+    /* margin-right: 40px; */
   }
 
   div > .blockAdress {
@@ -135,5 +136,9 @@ div > .blockAdress {
   }
   .footerPuppy {
     margin-top: 0px;
+  }
+  .contactsSection {
+    margin-top: 0;
+    margin-right: 60px;
   }
 }

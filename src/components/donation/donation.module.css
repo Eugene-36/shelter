@@ -18,9 +18,10 @@
 .spanText {
   font-style: normal;
   font-weight: normal;
+  display: flex;
   font-size: 15px;
   line-height: 160%;
-
+  /* width: 100%; */
   color: #545454;
 }
 .inp {

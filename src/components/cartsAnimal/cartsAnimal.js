@@ -2,6 +2,7 @@ import React from 'react';
 import s from './carts.module.css';
 import katrine from '../icons/pets-katrine.png';
 import left from '../icons/arrow-left (2).svg';
+
 //import ArrowLeft from '../arrows/arrowLeft';
 import right from '../icons/arrow-right (2).svg';
 function Carts() {

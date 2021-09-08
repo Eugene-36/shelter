@@ -51,6 +51,9 @@
     position: relative;
     height: 50px;
   }
+  .cart {
+    margin-left: 5px;
+  }
 }
 .getToknow {
   padding: 15px 45px;
@@ -84,7 +87,7 @@
   right: 15%;
 }
 .arrow {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 .sectionTitleInfo {
   margin-top: 30px;
@@ -160,12 +163,12 @@
   .circle {
     position: absolute;
     top: 30%;
-    left: 5%;
+    left: 1%;
   }
   .circleSecond {
     position: absolute;
     top: 30%;
-    right: 3%;
+    right: 1%;
   }
 
   .posBtn {

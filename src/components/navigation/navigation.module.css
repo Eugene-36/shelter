@@ -70,6 +70,7 @@
   background: #f1cdb3;
   border-radius: 2px;
 }
+
 /* ! Тут пошла рыгать адаптивка  */
 /* display: flex; надо дать на navigation */
 
@@ -78,8 +79,16 @@
     display: none;
   }
   .item {
-    margin-right: 25px;
+    margin-right: 10px;
   }
+  .burger {
+    margin-left: 0px;
+  }
+}
+.navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 @media (min-width: 768px) {
   .burger {
@@ -88,11 +97,13 @@
   .siteNav {
     display: block;
     display: flex;
-    margin-left: 62px;
+    /* margin-left: 62px; */
     align-items: center;
   }
   .navigation {
+    min-width: 100%;
     display: flex;
+    justify-content: space-between;
   }
   /* .item {
     margin-right: 25px;
@@ -103,7 +114,9 @@
 }
 
 @media (min-width: 1280px) {
-  .siteNav {
-    margin-left: 550px;
+  .navigation {
+    min-width: 100%;
+    /* display: flex; */
+    justify-content: space-between;
   }
 }

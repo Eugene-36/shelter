@@ -79,8 +79,14 @@
     justify-items: end;
   }
   li:nth-last-child(n + 2) {
-    margin-right: 25px;
+    margin-right: 20px;
   }
+  li:nth-child(5) {
+    margin-right: 0px;
+  }
+  /* li::nth-child(5) {
+    margin-right: 0px;
+  } */
   .posititon {
     width: 200px;
   }

@@ -8,10 +8,10 @@
 }
 
 .cart {
-  width: 270px;
+  /* width: 270px; */
   min-height: 435px;
   margin-top: 42px;
-  margin-left: 25px;
+  margin-left: 5px;
   background: #fafafa;
 }
 .bt {
@@ -117,7 +117,7 @@
   justify-content: center;
   padding-top: 10px;
 }
-/*  */
+
 .arrow {
   margin-top: 15px;
 }
@@ -173,7 +173,7 @@
     display: block;
   }
   .cartSecond {
-    width: 270px;
+    /* width: 270px; */
     min-height: 435px;
     margin-top: 42px;
     margin-left: 25px;
@@ -248,6 +248,10 @@
   .cartThird {
     display: none;
   }
+  .cart {
+    /* margin-left: 25px; */
+    margin-right: 10px;
+  }
 }
 @media (min-width: 1280px) {
   .cart:nth-child(-n + 5) {
@@ -300,11 +304,20 @@
     color: #292929;
   }
   .commonBlock {
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
+    display: grid;
+    grid-template-columns: 270px 270px 270px 270px;
+    grid-gap: 10px;
+  }
+  .cart {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
-
+/*     display: grid;
+    grid-template-columns: 270px 270px 270px 270px;
+    grid-gap: 10px; */
 /* .ourPetsCarts_cart__3GBZ0 {
     width: 270px;
     min-height: 435px;
