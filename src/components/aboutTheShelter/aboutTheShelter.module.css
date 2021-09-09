@@ -59,4 +59,7 @@
     justify-content: space-evenly;
     padding-bottom: 100px;
   }
+  .aboutDog {
+    width: 300px;
+  }
 }

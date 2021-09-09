@@ -1,10 +1,20 @@
 import React from 'react';
 import s from './aboutTheShelter.module.css';
 import whitePet from '../icons/about-pets.png';
+import { useMediaQuery } from 'react-responsive';
+
+console.log(useMediaQuery);
+
 function AboutShelter() {
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(min-width: 1224px)',
+  });
+  const isBigScreen = useMediaQuery({ query: '(min-width: 1824px)' });
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
+
   return (
     <section className={s.sectionAbout}>
-      <div className={s.containerAb  }>
+      <div className={s.containerAb}>
         {/* <h2 className={s.sectionTitle}>
           About the shelter <br />
           “Cozy House”
@@ -42,7 +52,13 @@ function AboutShelter() {
             </div>
           </li>
         </ul>
-        <img className="about-dog" src={whitePet} alt="" />
+        {isDesktopOrLaptop && (
+          <img className={s.aboutDog} src={whitePet} alt="" />
+        )}
+        {/* {isBigScreen && <img className={s.aboutDog} src={whitePet} alt="" />} */}
+        {isTabletOrMobile && (
+          <img className={s.aboutDog} src={whitePet} alt="" />
+        )}
       </div>
     </section>
   );
