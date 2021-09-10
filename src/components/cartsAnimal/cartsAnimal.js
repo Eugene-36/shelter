@@ -2,16 +2,17 @@ import React from 'react';
 import s from './carts.module.css';
 import katrine from '../icons/pets-katrine.png';
 import left from '../icons/arrow-left (2).svg';
+import classNames from 'classnames';
 
 //import ArrowLeft from '../arrows/arrowLeft';
 import right from '../icons/arrow-right (2).svg';
 function Carts() {
   return (
     <section className={s.back}>
-      <h2 className={s.headText}>
+      <h2 className={s.headText}> 
         Our friends who <br /> are looking for a house
       </h2>
-      <ul className={s.list}>
+      <ul className={classNames(s.list, s.aaaaa)}>
         <li className={s.item}>
           <div className={s.commonBlock}>
             <div className={s.cart}>

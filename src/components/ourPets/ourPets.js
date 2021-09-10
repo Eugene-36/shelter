@@ -20,22 +20,38 @@ function OurPets() {
             </div>
             <ul className={s.siteNav}>
               <li className={s.item}>
-                <Link to="/" className={s.link}>
+                <Link
+                  style={{ textDecoration: 'none', color: '#545454' }}
+                  to="/"
+                  className={s.link}
+                >
                   About the shelter
                 </Link>
               </li>
               <li className={s.item}>
-                <a href="" className={s.link}>
+                <a
+                  style={{ textDecoration: 'none', color: '#545454' }}
+                  href=""
+                  className={s.link}
+                >
                   Our pets
                 </a>
               </li>
               <li className={s.item}>
-                <a href="" className={s.link}>
+                <a
+                  style={{ textDecoration: 'none', color: '#545454' }}
+                  href=""
+                  className={s.link}
+                >
                   Help the shelter
                 </a>
               </li>
               <li className={s.item}>
-                <a href="" className={s.link}>
+                <a
+                  style={{ textDecoration: 'none', color: '#545454' }}
+                  href=""
+                  className={s.link}
+                >
                   Contacts
                 </a>
               </li>

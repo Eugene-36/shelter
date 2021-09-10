@@ -17,22 +17,38 @@ function Navigation() {
           </div>
           <ul className={s.siteNav}>
             <li className={s.item}>
-              <Link to="/" className={s.link}>
+              <Link
+                style={{ textDecoration: 'none', color: '#cdcdcd' }}
+                to="/"
+                className={s.link}
+              >
                 About the shelter
               </Link>
             </li>
             <li className={s.item}>
-              <Link to="/pets" className={s.link}>
+              <Link
+                style={{ textDecoration: 'none', color: '#cdcdcd' }}
+                to="/pets"
+                className={s.link}
+              >
                 Our pets
               </Link>
             </li>
             <li className={s.item}>
-              <Link to="/help" className={s.link}>
+              <Link
+                style={{ textDecoration: 'none', color: '#cdcdcd' }}
+                to="/help"
+                className={s.link}
+              >
                 Help the shelter
               </Link>
             </li>
             <li className={s.item}>
-              <Link to="/contacts" className={s.link}>
+              <Link
+                style={{ textDecoration: 'none', color: '#cdcdcd' }}
+                to="/contacts"
+                className={s.link}
+              >
                 Contacts
               </Link>
             </li>

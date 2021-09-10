@@ -53,8 +53,10 @@
 
   padding-bottom: 10px;
 
+  text-decoration: none;
   color: #cdcdcd;
 }
+
 /* ! Подчёркивание для кнопки  */
 .item {
   position: relative;
