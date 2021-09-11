@@ -1,3 +1,6 @@
+li {
+  list-style: none;
+}
 .back {
   padding-top: 42px;
   background-color: #f6f6f6;
@@ -8,7 +11,12 @@
 .aaaaa {
   background-color: tomato;
 }
-
+.page-item {
+  color: black;
+}
+.pos {
+  position: relative;
+}
 .cart {
   width: 270px;
   min-height: 435px;
