@@ -89,7 +89,7 @@ class Carts extends React.Component {
         'z',
       ],
       currentPage: 1,
-      todosPerPage: 3,
+      todosPerPage: 2,
       upperPageBound: 3,
       lowerPageBound: 0,
       isPrevBtnActive: 'disabled',
@@ -197,9 +197,29 @@ class Carts extends React.Component {
 
     const renderTodos = currentTodos.map((todo, index) => {
       console.log(todo);
-      return <li key={index}>{todo}</li>;
+      return (
+        <div className={s.commonBlock}>
+          <div className={classNames(s.cart, s['page-item'])}>
+            <li className={s.commonBlock} key={index}>
+              {todo}
+            </li>
+            <h3 className={s.sectionTitleInfo}>Katrine</h3>
+            <button className={s.bt}>
+              <span className={s.text}>Learn more</span>{' '}
+            </button>
+          </div>
+        </div>
+      );
+      // <div className={s.commonBlock}>
+      // <div className={classNames(s.cart, s['page-item'])}>
+      //              <img src={katrine} alt="" />
+      //              <h3 className={s.sectionTitleInfo}>Katrine</h3>
+      //             <button className={s.bt}>
+      //                <span className={s.text}>Learn more</span>{' '}
+      //             </button>
+      //           </div>
     });
-
+    // ! Тут ЛИШКИ - Мои карточки.
     // Logic for displaying page numbers
     const pageNumbers = [];
     for (let i = 1; i <= Math.ceil(todos.length / todosPerPage); i++) {
@@ -274,8 +294,11 @@ class Carts extends React.Component {
       );
     }
     return (
-      <div>
-        <ul>{renderTodos}</ul>
+      <section className={s.back}>
+        <h2 className={s.headText}>
+          Our friends who <br /> are looking for a house
+        </h2>
+        <ul className={s.commonBlock}>{renderTodos}</ul>
         <ul className={classNames(s.pos, ['pagination'])}>
           {renderPrevBtn}
           {pageDecrementBtn}
@@ -283,7 +306,7 @@ class Carts extends React.Component {
           {pageIncrementBtn}
           {renderNextBtn}
         </ul>
-      </div>
+      </section>
     );
   }
 }

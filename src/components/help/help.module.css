@@ -78,9 +78,9 @@
   li:nth-last-child(-n + 4) {
     justify-items: end;
   }
-  li:nth-last-child(n + 2) {
+  /* li:nth-last-child(n + 2) {
     margin-right: 20px;
-  }
+  } */
   li:nth-child(5) {
     margin-right: 0px;
   }
