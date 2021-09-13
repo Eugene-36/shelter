@@ -62,13 +62,22 @@ class Carts extends React.Component {
     super();
     this.state = {
       todos: [
-        <img src={katrine} alt="" />,
-        <img src={katrine} alt="" />,
-        <img src={katrine} alt="" />,
-        <img src={katrine} alt="" />,
-        <img src={katrine} alt="" />,
-        'g',
-        'h',
+        {
+          pic: <img src={katrine} alt="Name" />,
+          name: 'Katrine',
+        },
+        {
+          pic: <img src={katrine} alt="Name" />,
+          name: 'Lola',
+        },
+        {
+          pic: <img src={katrine} alt="Name" />,
+          name: 'Wooddy ',
+        },
+        {
+          pic: <img src={katrine} alt="Name" />,
+          name: 'Liza',
+        },
         'i',
         'j',
         'k',
@@ -190,20 +199,20 @@ class Carts extends React.Component {
       isPrevBtnActive,
       isNextBtnActive,
     } = this.state;
+    //console.log(todos);
     // Logic for displaying current todos
     const indexOfLastTodo = currentPage * todosPerPage;
     const indexOfFirstTodo = indexOfLastTodo - todosPerPage;
     const currentTodos = todos.slice(indexOfFirstTodo, indexOfLastTodo);
 
-    const renderTodos = currentTodos.map((todo, index) => {
-      console.log(todo);
+    const renderTodos = currentTodos.map(({ pic,name ,index }) => {
       return (
         <div className={s.commonBlock}>
           <div className={classNames(s.cart, s['page-item'])}>
             <li className={s.commonBlock} key={index}>
-              {todo}
+              {pic}
             </li>
-            <h3 className={s.sectionTitleInfo}>Katrine</h3>
+            <h3 className={s.sectionTitleInfo}>{name}</h3>
             <button className={s.bt}>
               <span className={s.text}>Learn more</span>{' '}
             </button>
@@ -219,6 +228,7 @@ class Carts extends React.Component {
       //             </button>
       //           </div>
     });
+    console.log(renderTodos);
     // ! Тут ЛИШКИ - Мои карточки.
     // Logic for displaying page numbers
     const pageNumbers = [];
@@ -298,13 +308,15 @@ class Carts extends React.Component {
         <h2 className={s.headText}>
           Our friends who <br /> are looking for a house
         </h2>
-        <ul className={s.commonBlock}>{renderTodos}</ul>
-        <ul className={classNames(s.pos, ['pagination'])}>
-          {renderPrevBtn}
-          {pageDecrementBtn}
-          {renderPageNumbers}
-          {pageIncrementBtn}
-          {renderNextBtn}
+        <ul className={s.commonBlock}>
+          <ul className={classNames(s.pos, ['pagination'])}>
+            {renderTodos}
+            {/* {pageDecrementBtn} */}
+            {/* {renderPageNumbers} */}
+            {/* {pageIncrementBtn} */}
+            {renderPrevBtn}
+            {renderNextBtn}
+          </ul>
         </ul>
       </section>
     );

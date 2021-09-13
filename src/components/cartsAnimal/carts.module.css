@@ -17,6 +17,7 @@ li {
 .pos {
   position: relative;
   display: flex;
+  flex-flow: column;
   justify-content: center;
 }
 li:not(:first-child) {
@@ -26,8 +27,8 @@ li:not(:first-child) {
   width: 270px;
   min-height: 435px;
   margin-top: 42px;
-  margin-left: 25px;
-  margin-right: 25px;
+  /* margin-left: 25px;
+  margin-right: 25px; */
 
   background: #fafafa;
 }
@@ -49,6 +50,9 @@ li:not(:first-child) {
 
   letter-spacing: 0.06em;
   color: #292929;
+}
+.commonBlock {
+  padding-bottom: 50px;
 }
 /* .posBtn {
   display: flex;
@@ -94,6 +98,7 @@ li:not(:first-child) {
 
   position: absolute;
   right: 70%;
+  bottom: 0;
 }
 .circleSecond {
   width: 40px;
@@ -103,6 +108,7 @@ li:not(:first-child) {
 
   position: absolute;
   right: 15%;
+  bottom: 0;
 }
 .arrow {
   margin-top: 10px;
@@ -170,8 +176,14 @@ li:not(:first-child) {
     color: #292929;
   }
   .commonBlock {
-    display: flex;
+    /* display: flex; */
     justify-content: center;
+  }
+  .pos {
+    flex-flow: row;
+  }
+  li:not(:first-child) {
+    margin-left: 0px;
   }
 }
 
@@ -201,6 +213,11 @@ li:not(:first-child) {
   }
   .cartThird {
     display: none;
+  }
+
+  .cart {
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
 @media (min-width: 1280px) {
