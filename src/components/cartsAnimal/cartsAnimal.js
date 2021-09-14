@@ -1,10 +1,20 @@
 import React from 'react';
 import s from './carts.module.css';
 import katrine from '../icons/pets-katrine.png';
+import img0 from '../icons-looking-for-a-house/freddi.png';
+import img1 from '../icons-looking-for-a-house/pets-charly.png';
+import img2 from '../icons-looking-for-a-house/pets-jennifer.png';
+import img3 from '../icons-looking-for-a-house/pets-scarlet.png';
+import img4 from '../icons-looking-for-a-house/pets-timmy.png';
+import img5 from '../icons-looking-for-a-house/pets-woody.png';
+import img6 from '../icons-looking-for-a-house/sophia.png';
+
 import left from '../icons/arrow-left (2).svg';
 import right from '../icons/arrow-right (2).svg';
 import classNames from 'classnames';
 import $ from 'jquery';
+import { v4 as uuidv4 } from 'uuid';
+console.log(uuidv4());
 //import ArrowLeft from '../arrows/arrowLeft';
 // import right from '../icons/arrow-right (2).svg';
 // function Carts() {
@@ -63,39 +73,45 @@ class Carts extends React.Component {
     this.state = {
       todos: [
         {
-          pic: <img src={katrine} alt="Name" />,
+          pic: <img src={katrine} alt="" />,
           name: 'Katrine',
+          id: 1,
         },
         {
-          pic: <img src={katrine} alt="Name" />,
-          name: 'Lola',
+          pic: <img src={img0} alt="" />,
+          name: 'Freddi',
+          id: 2,
         },
         {
-          pic: <img src={katrine} alt="Name" />,
-          name: 'Wooddy ',
+          pic: <img src={img1} alt="" />,
+          name: 'Charly ',
+          id: 3,
         },
         {
-          pic: <img src={katrine} alt="Name" />,
-          name: 'Liza',
+          pic: <img src={img2} alt="Name" />,
+          name: 'Jennifer',
+          id: 4,
         },
-        'i',
-        'j',
-        'k',
-        'l',
-        'm',
-        'n',
-        'o',
-        'p',
-        'q',
-        'r',
-        's',
-        't',
-        'u',
-        'v',
-        'w',
-        'x',
-        'y',
-        'z',
+        {
+          pic: <img src={img3} alt="Name" />,
+          name: 'Scarlet',
+          id: 5,
+        },
+        {
+          pic: <img src={img4} alt="Name" />,
+          name: 'Timmy',
+          id: 6,
+        },
+        {
+          pic: <img src={img5} alt="Name" />,
+          name: 'Woody',
+          id: 7,
+        },
+        {
+          pic: <img src={img6} alt="Name" />,
+          name: 'Sophia',
+          id: 8,
+        },
       ],
       currentPage: 1,
       todosPerPage: 2,
@@ -113,6 +129,7 @@ class Carts extends React.Component {
     // this.componentDidMount = this.componentDidMount.bind(this);
     this.setPrevAndNextBtnClass = this.setPrevAndNextBtnClass.bind(this);
   }
+
   componentDidUpdate() {
     $('ul li.active').removeClass('active');
     $('ul li#' + this.state.currentPage).addClass('active');
@@ -190,6 +207,8 @@ class Carts extends React.Component {
     this.setPrevAndNextBtnClass(listid);
   }
   render() {
+    const { pro } = this.props;
+    console.log(pro);
     const {
       todos,
       currentPage,
@@ -205,11 +224,12 @@ class Carts extends React.Component {
     const indexOfFirstTodo = indexOfLastTodo - todosPerPage;
     const currentTodos = todos.slice(indexOfFirstTodo, indexOfLastTodo);
 
-    const renderTodos = currentTodos.map(({ pic,name ,index }) => {
+    const renderTodos = currentTodos.map(({ pic, name, id }) => {
+      console.log(id);
       return (
-        <div className={s.commonBlock}>
-          <div className={classNames(s.cart, s['page-item'])}>
-            <li className={s.commonBlock} key={index}>
+        <div key={id} className={s.commonBlock}>
+          <div key={pro} className={classNames(s.cart, s['page-item'])}>
+            <li className={s.commonBlock} key={pro}>
               {pic}
             </li>
             <h3 className={s.sectionTitleInfo}>{name}</h3>
@@ -228,7 +248,7 @@ class Carts extends React.Component {
       //             </button>
       //           </div>
     });
-    console.log(renderTodos);
+    //  console.log(renderTodos);
     // ! Тут ЛИШКИ - Мои карточки.
     // Logic for displaying page numbers
     const pageNumbers = [];
@@ -274,13 +294,13 @@ class Carts extends React.Component {
     let renderPrevBtn = null;
     if (isPrevBtnActive === 'disabled') {
       renderPrevBtn = (
-        <li className={classNames(s.circle, isPrevBtnActive)}>
+        <li key={uuidv4()} className={classNames(s.circle, isPrevBtnActive)}>
           <img id="btnPrev" src={left} alt="" className={s.arrow} />
         </li>
       );
     } else {
       renderPrevBtn = (
-        <li className={classNames(s.circle, isPrevBtnActive)}>
+        <li key={uuidv4()} className={classNames(s.circle, isPrevBtnActive)}>
           <a id="btnPrev" onClick={this.btnPrevClick}>
             <img id="btnPrev" src={left} alt="" className={s.arrow} />
           </a>
@@ -290,13 +310,19 @@ class Carts extends React.Component {
     let renderNextBtn = null;
     if (isNextBtnActive === 'disabled') {
       renderNextBtn = (
-        <li className={classNames(s.circleSecond, isNextBtnActive)}>
+        <li
+          key={uuidv4()}
+          className={classNames(s.circleSecond, isNextBtnActive)}
+        >
           <img id="btnNext" src={right} alt="" className={s.arrow} />
         </li>
       );
     } else {
       renderNextBtn = (
-        <li className={classNames(s.circleSecond, isNextBtnActive)}>
+        <li
+          key={uuidv4()}
+          className={classNames(s.circleSecond, isNextBtnActive)}
+        >
           <a id="btnNext" onClick={this.btnNextClick}>
             <img id="btnNext" src={right} alt="" className={s.arrow} />
           </a>

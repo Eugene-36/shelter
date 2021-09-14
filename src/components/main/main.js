@@ -5,8 +5,9 @@ import Carts from '../cartsAnimal/cartsAnimal';
 import Help from '../help/help';
 import Donation from '../donation/donation';
 import Footer from '../footer/footer';
-
+import { v4 as uuidv4 } from 'uuid';
 import React from 'react';
+console.log();
 function Main() {
   return (
     <>
@@ -15,7 +16,7 @@ function Main() {
         <Hero />
       </div>
       <AboutShelter />
-      <Carts />
+      <Carts pro={uuidv4()} />
       <Help />
       <Donation />
       <Footer />

@@ -254,7 +254,10 @@ li:not(:first-child) {
     color: #292929;
   }
   .commonBlock {
-    display: flex;
+    /* display: flex; */
     justify-content: center;
+  }
+  .pos {
+    justify-content: space-evenly;
   }
 }
