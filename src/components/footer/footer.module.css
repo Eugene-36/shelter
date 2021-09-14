@@ -141,4 +141,7 @@ div > .blockAdress {
     margin-top: 0;
     margin-right: 60px;
   }
+  .blockFooter {
+    padding-top: 0px;
+  }
 }
