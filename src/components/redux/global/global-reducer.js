@@ -6,6 +6,4 @@ const modalLogoutOpenReducer = createReducer(false, {
   [isModalLogoutClose]: () => false,
 });
 
-export default combineReducers({
-  modalLogoutOpenReducer,
-});
+export default modalLogoutOpenReducer;
