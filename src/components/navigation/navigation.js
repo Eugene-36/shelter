@@ -2,7 +2,17 @@ import React from 'react';
 import s from './navigation.module.css';
 import burger from '../icons/Burger.svg';
 import { Link } from 'react-router-dom';
+
+// Импорты чтобы попробовать открыть модалку
+// import { useSelector, useDispatch } from 'react-redux';
+// import { isModalLogoutOpen } from '../redux/global/global-action';
+// import Modal from 'react-modal';
+// Modal.setAppElement('#root');
+
 function Navigation() {
+  // const dispatch = useDispatch();
+  // const ModalLogoutOpen = () => dispatch(isModalLogoutOpen());
+
   return (
     <header className="#">
       <div className={s.containerHead}>
@@ -55,7 +65,13 @@ function Navigation() {
           </ul>
         </nav>
 
-        <img className={s.burger} height={22} src={burger} alt="" />
+        <img
+          // onClick={ModalLogoutOpen}
+          className={s.burger}
+          height={22}
+          src={burger}
+          alt=""
+        />
 
         {/* <div class="container header-mobil"> 
                 <button type="button" class="menu-button" aria-expanded="false" data-menu-button>
