@@ -6,4 +6,5 @@ const modalLogoutOpenReducer = createReducer(false, {
   [isModalLogoutClose]: () => false,
 });
 
+console.log(modalLogoutOpenReducer);
 export default modalLogoutOpenReducer;

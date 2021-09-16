@@ -2,16 +2,18 @@ import React from 'react';
 import s from './navigation.module.css';
 import burger from '../icons/Burger.svg';
 import { Link } from 'react-router-dom';
-
+//import UserMenu from '../modal/modal';
+import ModalWin from '../modal/modal';
 // Импорты чтобы попробовать открыть модалку
-// import { useSelector, useDispatch } from 'react-redux';
-// import { isModalLogoutOpen } from '../redux/global/global-action';
-// import Modal from 'react-modal';
-// Modal.setAppElement('#root');
+import { useSelector, useDispatch } from 'react-redux';
+import { isModalLogoutOpen } from '../redux/global/global-action';
+import moduleName from '../modal/modal';
+import Modal from 'react-modal';
+Modal.setAppElement('#root');
 
 function Navigation() {
-  // const dispatch = useDispatch();
-  // const ModalLogoutOpen = () => dispatch(isModalLogoutOpen());
+  const dispatch = useDispatch();
+  const ModalLogoutOpen = () => dispatch(isModalLogoutOpen());
 
   return (
     <header className="#">
@@ -64,14 +66,12 @@ function Navigation() {
             </li>
           </ul>
         </nav>
+        <div className={s.out} onClick={ModalLogoutOpen}>
+          <ModalWin />
+          {/* <UserMenu /> */}
+        </div>
 
-        <img
-          // onClick={ModalLogoutOpen}
-          className={s.burger}
-          height={22}
-          src={burger}
-          alt=""
-        />
+        {/*! А сюда нужно будет импортировать компонент*/}
 
         {/* <div class="container header-mobil"> 
                 <button type="button" class="menu-button" aria-expanded="false" data-menu-button>
