@@ -4,6 +4,8 @@ import mainDog from '../icons/start-screen-puppy.png';
 import desktop from '../icons/main-big-puppy.png';
 import tablet from '../icons/main-tablet.png';
 import { useMediaQuery } from 'react-responsive';
+
+
 function Hero() {
   const isDesktopOrLaptop = useMediaQuery({
     query: '(min-width: 1224px)',

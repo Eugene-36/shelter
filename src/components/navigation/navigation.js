@@ -2,19 +2,10 @@ import React from 'react';
 import s from './navigation.module.css';
 import burger from '../icons/Burger.svg';
 import { Link } from 'react-router-dom';
-//import UserMenu from '../modal/modal';
-import ModalWin from '../modal/modal';
-// Импорты чтобы попробовать открыть модалку
-import { useSelector, useDispatch } from 'react-redux';
-import { isModalLogoutOpen } from '../redux/global/global-action';
-import moduleName from '../modal/modal';
-import Modal from 'react-modal';
-Modal.setAppElement('#root');
+
+import ModalNew from '../modal/modal';
 
 function Navigation() {
-  const dispatch = useDispatch();
-  const ModalLogoutOpen = () => dispatch(isModalLogoutOpen());
-
   return (
     <header className="#">
       <div className={s.containerHead}>
@@ -66,10 +57,9 @@ function Navigation() {
             </li>
           </ul>
         </nav>
-        <div className={s.out} onClick={ModalLogoutOpen}>
-          <ModalWin />
-          {/* <UserMenu /> */}
-        </div>
+        {/* <div className={s.out} onClick={ModalLogoutOpen}></div> */}
+
+        <ModalNew />
 
         {/*! А сюда нужно будет импортировать компонент*/}
 

@@ -7,20 +7,19 @@ import { Provider } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
+
+import store from './components/redux/store';
 import { PersistGate } from 'redux-persist/es/integration/react';
-import configureStore from './components/redux/store';
-const { persistor, store } = configureStore();
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <PersistGate persistor={persistor}>
+    <Provider store={store.store}>
+      <PersistGate loading={null} persistor={store.persistor}>
         <BrowserRouter>
           <App />
         </BrowserRouter>
       </PersistGate>
     </Provider>
-    ,
   </React.StrictMode>,
   document.getElementById('root'),
 );
