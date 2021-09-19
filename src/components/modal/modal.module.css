@@ -341,7 +341,7 @@ li {
   .cl-btn-2 .close-btn {
     left: 5%;
   }
-  li {
+  .item {
     margin-right: 15px;
   }
 }

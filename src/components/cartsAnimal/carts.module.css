@@ -20,9 +20,9 @@ li {
   flex-flow: column;
   justify-content: center;
 }
-li:not(:first-child) {
+/* li:not(:first-child) {
   margin-left: 10px;
-}
+} */
 .cart {
   width: 270px;
   min-height: 435px;
