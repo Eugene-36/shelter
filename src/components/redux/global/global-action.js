@@ -1,42 +1,37 @@
 import { createAction } from '@reduxjs/toolkit';
 
-// --- Екшены на получение всех транзакций
-export const fetchTransactionsRequest = createAction(
-  'global/fetchTransactionsRequest',
-);
-export const fetchTransactionsSuccess = createAction(
-  'global/fetchTransactionsSuccess',
-);
-export const fetchTransactionsError = createAction(
-  'global/fetchTransactionsError',
-);
+// --- Екшены на получение всех животных
+export const fetchAnimalsRequest = createAction('global/fetchAnimalsRequest');
+//console.log(fetchAnimalsRequest);
+export const fetchAnimalsSuccess = createAction('global/fetchAnimalsSuccess');
+export const fetchAnimalsError = createAction('global/fetchAnimalsError');
 
-// --- Екшены на получение баланса
-export const fetchBalanceRequest = createAction('global/fetchBalanceRequest');
-export const fetchBalanceSuccess = createAction('global/fetchBalanceSuccess');
-export const fetchBalanceError = createAction('global/fetchBalanceError');
+// // --- Екшены на получение баланса
+// export const fetchBalanceRequest = createAction('global/fetchBalanceRequest');
+// export const fetchBalanceSuccess = createAction('global/fetchBalanceSuccess');
+// export const fetchBalanceError = createAction('global/fetchBalanceError');
 
-// --- Екшены на получение транзакций за определенный период
-export const fetchStaticticRequest = createAction(
-  'global/fetchStaticticRequest',
-);
-export const fetchStaticticSuccess = createAction(
-  'global/fetchStaticticSuccess',
-);
-export const fetchStaticticError = createAction('global/fetchStaticticError');
-export const errorUnset = createAction('global/errorUnset');
-export const statisticUnset = createAction('global/statisticUnset');
+// // --- Екшены на получение транзакций за определенный период
+// export const fetchStaticticRequest = createAction(
+//   'global/fetchStaticticRequest',
+// );
+// export const fetchStaticticSuccess = createAction(
+//   'global/fetchStaticticSuccess',
+// );
+// export const fetchStaticticError = createAction('global/fetchStaticticError');
+// export const errorUnset = createAction('global/errorUnset');
+// export const statisticUnset = createAction('global/statisticUnset');
 
-// --- Екшены на добавление транзакции
-export const addNewTransactionRequest = createAction(
-  'global/addNewTransactionRequest',
-);
-export const addNewTransactionSuccess = createAction(
-  'global/addNewTransactionSuccess',
-);
-export const addNewTransactionError = createAction(
-  'global/addNewTransactionError',
-);
+// // --- Екшены на добавление транзакции
+// export const addNewTransactionRequest = createAction(
+//   'global/addNewTransactionRequest',
+// );
+// export const addNewTransactionSuccess = createAction(
+//   'global/addNewTransactionSuccess',
+// );
+// export const addNewTransactionError = createAction(
+//   'global/addNewTransactionError',
+// );
 
 // --- Екшены на открытие ModalLogout
 export const isModalLogoutOpen = createAction('global/isModalLogoutOpen');
@@ -55,9 +50,9 @@ export const isModalAddTransactionClose = createAction(
 );
 
 // --- Екшены на взятие value из Select`а
-export const valueSelect = createAction('global/valueSelect');
+// export const valueSelect = createAction('global/valueSelect');
 
-// --- Екшены на удаление
-export const deleteRequest = createAction('global/deleteRequest');
-export const deleteSuccess = createAction('global/deleteSuccess');
-export const deleteError = createAction('global/deleteError');
+// // --- Екшены на удаление
+// export const deleteRequest = createAction('global/deleteRequest');
+// export const deleteSuccess = createAction('global/deleteSuccess');
+// export const deleteError = createAction('global/deleteError');

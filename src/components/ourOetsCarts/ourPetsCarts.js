@@ -6,6 +6,7 @@ import tickLeft from '../icons/tick-left.svg';
 import doubleTickLeft from '../icons/double-tick-left.svg';
 import s from './ourPetsCarts.module.css';
 function OurPetsCarts() {
+  
   return (
     <>
       <section className={s.back}>

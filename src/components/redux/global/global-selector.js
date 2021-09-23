@@ -22,3 +22,6 @@ export const istotalBalance = state => state.global.totalBalance;
 
 // --- Селектор на взятие из State error
 export const errorState = state => state.global.error;
+
+// Получить всех животных
+export const getAllAnimals = state => state.global.animals;

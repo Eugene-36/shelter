@@ -11,7 +11,7 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import globalReducer from './global/global-reducer';
-
+import logger from 'redux-logger'
 const middleware = getDefaultMiddleware({
   serializableCheck: {
     ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
@@ -30,6 +30,7 @@ export const store = configureStore({
   reducer: {
     auth: persistedReducer,
     global: globalReducer,
+    
   },
   middleware,
 });
