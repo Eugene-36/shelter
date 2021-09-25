@@ -21,7 +21,7 @@ function Navigation() {
           <ul className={s.siteNav}>
             <li className={s.item}>
               <Link
-                style={{ textDecoration: 'none', color: '#cdcdcd' }}
+                style={{ textDecoration: 'none' }}
                 to="/"
                 className={s.link}
               >
@@ -30,7 +30,7 @@ function Navigation() {
             </li>
             <li className={s.item}>
               <Link
-                style={{ textDecoration: 'none', color: '#cdcdcd' }}
+                style={{ textDecoration: 'none' }}
                 to="/pets"
                 className={s.link}
               >
@@ -39,7 +39,7 @@ function Navigation() {
             </li>
             <li className={s.item}>
               <Link
-                style={{ textDecoration: 'none', color: '#cdcdcd' }}
+                style={{ textDecoration: 'none' }}
                 to="/help"
                 className={s.link}
               >
@@ -48,7 +48,7 @@ function Navigation() {
             </li>
             <li className={s.item}>
               <Link
-                style={{ textDecoration: 'none', color: '#cdcdcd' }}
+                style={{ textDecoration: 'none' }}
                 to="/contacts"
                 className={s.link}
               >

@@ -1,12 +1,20 @@
-import React from 'react';
-import katrine from '../icons/pets-katrine.png';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { addAnimals } from '../redux/global/global-operations';
+import { getAllAnimals } from '../redux/global/global-selector';
 import tickRight from '../icons/single-tick-right.svg';
 import doubleTick from '../icons/double-tick.svg';
 import tickLeft from '../icons/tick-left.svg';
 import doubleTickLeft from '../icons/double-tick-left.svg';
 import s from './ourPetsCarts.module.css';
+
 function OurPetsCarts() {
-  
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(addAnimals());
+  }, [dispatch]);
+  const result = useSelector(getAllAnimals);
+
   return (
     <>
       <section className={s.back}>
@@ -16,76 +24,15 @@ function OurPetsCarts() {
         <ul className={s.list}>
           <li className={s.item}>
             <div className={s.commonBlock}>
-              <div className={s.cart}>
-                <img src={katrine} alt="" />
-                <h3 className={s.sectionTitleInfo}>Katrine</h3>
-                <button className={s.bt}>
-                  <span className={s.text}>Learn more</span>{' '}
-                </button>
-              </div>
-              <div className={s.cart}>
-                <img src={katrine} alt="" />
-                <h3 className={s.sectionTitleInfo}>Katrine</h3>
-                <button className={s.bt}>
-                  <span className={s.text}>Learn more</span>{' '}
-                </button>
-              </div>
-              <div className={s.cart}>
-                <img src={katrine} alt="" />
-                <h3 className={s.sectionTitleInfo}>Katrine</h3>
-                <button className={s.bt}>
-                  <span className={s.text}>Learn more</span>{' '}
-                </button>
-              </div>
-              <div className={s.cart}>
-                <img src={katrine} alt="" />
-                <h3 className={s.sectionTitleInfo}>Katrine</h3>
-                <button className={s.bt}>
-                  <span className={s.text}>Learn more</span>{' '}
-                </button>
-              </div>
-              <div className={s.cart}>
-                <img src={katrine} alt="" />
-                <h3 className={s.sectionTitleInfo}>Katrine</h3>
-                <button className={s.bt}>
-                  <span className={s.text}>Learn more</span>{' '}
-                </button>
-              </div>
-              <div className={s.cart}>
-                <img src={katrine} alt="" />
-                <h3 className={s.sectionTitleInfo}>Katrine</h3>
-                <button className={s.bt}>
-                  <span className={s.text}>Learn more</span>{' '}
-                </button>
-              </div>
-              <div className={s.cart}>
-                <img src={katrine} alt="" />
-                <h3 className={s.sectionTitleInfo}>Katrine</h3>
-                <button className={s.bt}>
-                  <span className={s.text}>Learn more</span>{' '}
-                </button>
-              </div>
-              <div className={s.cart}>
-                <img src={katrine} alt="" />
-                <h3 className={s.sectionTitleInfo}>Katrine</h3>
-                <button className={s.bt}>
-                  <span className={s.text}>Learn more</span>{' '}
-                </button>
-              </div>
-              {/* <div className={s.cartSecond}>
-                <img src={katrine} alt="" />
-                <h3 className={s.name}>Katrine</h3>
-                <button className={s.btn}>
-                  <span className={s.textInside}>Learn more</span>{' '}
-                </button>
-              </div>
-              <div className={s.cartThird}>
-                <img src={katrine} alt="" />
-                <h3 className={s.name}>Katrine</h3>
-                <button className={s.btn}>
-                  <span className={s.textInside}>Learn more</span>{' '}
-                </button>
-              </div> */}
+              {result.map(({ name, img, id, button }) => (
+                <div className={s.cart} key={id}>
+                  <img src={`${'http://localhost:3000/'}${img}`} alt="" />
+                  <h3 className={s.sectionTitleInfo}>{name}</h3>
+                  <button className={s.bt}>
+                    <span className={s.text}>{button}</span>{' '}
+                  </button>
+                </div>
+              ))}
             </div>
             <div className={s.posBtn}>
               {/* <ArrowLeft /> */}

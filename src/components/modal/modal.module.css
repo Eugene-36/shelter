@@ -1,13 +1,21 @@
 .burgerBtn {
   display: flex;
   margin-right: 10px;
+  cursor: pointer;
+}
+.burgerMenu {
+  top: 40%;
+  left: 15%;
+  position: absolute;
+  transform: rotate(90deg);
+  cursor: pointer;
 }
 .positionBtn {
   text-align: center;
   padding-right: 0;
   padding-left: 0;
 }
-.modalContent {
+/* .modalContent {
   width: 320px;
   height: 260px;
   padding-top: 100px;
@@ -21,7 +29,7 @@
   bottom: 0;
   left: 0;
   margin: auto;
-}
+} */
 
 .modalOverlay {
   position: fixed;
@@ -56,15 +64,15 @@
 
   .modalContent {
     width: 320px;
-    height: 350px;
+    height: 823px;
     padding-top: 100px;
     padding-left: 20px;
-    border-radius: 20px;
-    background-color: #ffff;
+    /* border-radius: 20px; */
+    background: #292929;
     position: absolute;
     top: 0;
     right: 0;
-    bottom: 0;
+    /* bottom: 0; */
     left: 0;
     margin: auto;
   }
@@ -75,16 +83,7 @@
   }
 
   .modalContent {
-    position: absolute;
-    width: 540px;
-    height: 260px;
-    border-radius: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    top: 90px;
-    text-align: center;
+    display: none;
   }
   .positionBtn {
     display: flex;
@@ -150,11 +149,6 @@
 
 /* Крестик для конпки */
 
-.cl-btn-2 {
-  margin: 20px;
-  display: flex;
-  justify-content: center;
-}
 .cl-btn-2 div {
   cursor: pointer;
   height: 68px;
@@ -210,7 +204,7 @@
 }
 
 /*! Стили для навигации внутри   */
-li {
+.item {
   margin-bottom: 10px;
 }
 .siteNav {
@@ -220,6 +214,9 @@ li {
 .under {
   display: flex;
   flex-direction: column;
+  position: absolute;
+  top: 1%;
+  left: 3%;
 }
 
 .containerHead {
@@ -273,13 +270,19 @@ li {
   padding-bottom: 10px;
 
   text-decoration: none;
-  color: #808080;
+  color: #cdcdcd;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.link:hover {
+  color: #fafafa;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ! Подчёркивание для кнопки  */
 .item {
   position: relative;
   display: flex;
+  justify-content: center;
 }
 .item:first-child::after {
   content: '';
@@ -312,7 +315,8 @@ li {
   justify-content: center;
 }
 @media (min-width: 768px) {
-  .burger {
+  .burger,
+  .modalOverlay {
     display: none;
   }
   .siteNav {

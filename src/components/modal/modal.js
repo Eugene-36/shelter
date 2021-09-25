@@ -32,16 +32,30 @@ function ModalWin() {
         overlayClassName={styles.modalOverlay}
         contentLabel="Example Modal"
       >
+        <div className={styles.logoPosition}>
+          <div className={styles.under}>
+            <a href="./index.html" className="logo link-underline">
+              <span className={styles.cozyStyle}>Cozy House</span>
+            </a>
+            <span className={styles.subtitle}>Shelter for pets in Boston</span>
+          </div>
+        </div>
         <div className={classNames(styles['cl-btn-2'])}>
           <div>
-            <div className={classNames(styles['leftright'])}></div>
+            <img
+              onClick={ModalLogoutClose}
+              src={burger}
+              className={styles.burgerMenu}
+              alt=""
+            />
+            {/* <div className={classNames(styles['leftright'])}></div>
             <div className={classNames(styles['rightleft'])}></div>
             <span
               className={classNames(styles['close-btn'])}
               onClick={ModalLogoutClose}
             >
               закрыть
-            </span>
+            </span> */}
           </div>
         </div>
         <div className={styles.containerHead}>
@@ -49,7 +63,7 @@ function ModalWin() {
             <ul className={styles.siteNav}>
               <li className={styles.item}>
                 <Link
-                  style={{ textDecoration: 'none', color: '#808080' }}
+                  style={{ textDecoration: 'none' }}
                   to="/"
                   className={styles.link}
                 >
@@ -58,7 +72,7 @@ function ModalWin() {
               </li>
               <li className={styles.item}>
                 <Link
-                  style={{ textDecoration: 'none', color: '#808080' }}
+                  style={{ textDecoration: 'none' }}
                   to="/pets"
                   className={styles.link}
                 >
@@ -67,7 +81,7 @@ function ModalWin() {
               </li>
               <li className={styles.item}>
                 <Link
-                  style={{ textDecoration: 'none', color: '#808080' }}
+                  style={{ textDecoration: 'none' }}
                   to="/help"
                   className={styles.link}
                 >
@@ -76,7 +90,7 @@ function ModalWin() {
               </li>
               <li className={styles.item}>
                 <Link
-                  style={{ textDecoration: 'none', color: '#808080' }}
+                  style={{ textDecoration: 'none' }}
                   to="/contacts"
                   className={styles.link}
                 >
