@@ -26,7 +26,10 @@ function OurPetsCarts() {
             <div className={s.commonBlock}>
               {result.map(({ name, img, id, button }) => (
                 <div className={s.cart} key={id}>
-                  <img src={`${'http://localhost:3000/'}${img}`} alt="" />
+                  <img
+                    src={`${'https://murmuring-woodland-80890.herokuapp.com/'}${img}`}
+                    alt=""
+                  />
                   <h3 className={s.sectionTitleInfo}>{name}</h3>
                   <button className={s.bt}>
                     <span className={s.text}>{button}</span>{' '}
