@@ -1,5 +1,6 @@
 import React from 'react';
 import s from './carts.module.css';
+import styleContainer from '../../components/styles/base.module.css';
 import katrine from '../icons/pets-katrine.png';
 import img0 from '../icons-looking-for-a-house/freddi.png';
 import img1 from '../icons-looking-for-a-house/pets-charly.png';
@@ -331,19 +332,21 @@ class Carts extends React.Component {
     }
     return (
       <section className={s.back}>
-        <h2 className={s.headText}>
-          Our friends who <br /> are looking for a house
-        </h2>
-        <ul className={s.commonBlock}>
-          <ul className={classNames(s.pos, ['pagination'])}>
-            {renderTodos}
-            {/* {pageDecrementBtn} */}
-            {/* {renderPageNumbers} */}
-            {/* {pageIncrementBtn} */}
-            {renderPrevBtn}
-            {renderNextBtn}
+        <div className={styleContainer.container}>
+          <h2 className={s.headText}>
+            Our friends who <br /> are looking for a house
+          </h2>
+          <ul className={s.commonBlock}>
+            <ul className={classNames(s.pos, ['pagination'])}>
+              {renderTodos}
+              {/* {pageDecrementBtn} */}
+              {/* {renderPageNumbers} */}
+              {/* {pageIncrementBtn} */}
+              {renderPrevBtn}
+              {renderNextBtn}
+            </ul>
           </ul>
-        </ul>
+        </div>
       </section>
     );
   }

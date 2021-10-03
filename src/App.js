@@ -18,21 +18,20 @@ import Main from './components/main/main';
 function App() {
   return (
     <Router>
-      <div className={s.container}>
-        {/* <div className="back"> */}
-        {/* <Navigation /> */}
-        {/* <Hero /> */}
-        {/* </div> */}
-        <Switch>
-          <Route exact path="/" component={Main} />
-          <Route path="/pets" component={OurPets} />
-        </Switch>
-        {/* <AboutShelter />
+      {/* <div className={s.container}> */}
+      {/* <div className="back"> */}
+      {/* <Navigation /> */}
+      {/* <Hero /> */}
+      {/* </div> */}
+      <Switch>
+        <Route exact path="/" component={Main} />
+        <Route path="/pets" component={OurPets} />
+      </Switch>
+      {/* <AboutShelter />
         <Carts />
         <Help />
         <Donation /> */}
-       
-      </div>
+      {/* </div> */}
     </Router>
   );
 }

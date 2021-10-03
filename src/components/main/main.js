@@ -5,8 +5,8 @@ import Carts from '../cartsAnimal/cartsAnimal';
 import Help from '../help/help';
 import Donation from '../donation/donation';
 import Footer from '../footer/footer';
+import s from '../../components/styles/base.module.css';
 import { v4 as uuidv4 } from 'uuid';
-
 
 //===============================
 
@@ -16,10 +16,14 @@ function Main() {
   return (
     <>
       <div className="back">
-        <Navigation />
-        <Hero />
+        <div className={s.container}>
+          <Navigation />
+          <Hero />
+        </div>
       </div>
-      <AboutShelter />
+      <div className={s.container}>
+        <AboutShelter />
+      </div>
       <Carts pro={uuidv4()} />
       <Help />
       <Donation />
