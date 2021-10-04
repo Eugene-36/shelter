@@ -14,59 +14,12 @@ import left from '../icons/arrow-left (2).svg';
 import right from '../icons/arrow-right (2).svg';
 import classNames from 'classnames';
 import $ from 'jquery';
+
 import { v4 as uuidv4 } from 'uuid';
-console.log(uuidv4());
-//import ArrowLeft from '../arrows/arrowLeft';
-// import right from '../icons/arrow-right (2).svg';
-// function Carts() {
-//   return (
-//     <section className={s.back}>
-//       <h2 className={s.headText}>
-//         Our friends who <br /> are looking for a house
-//       </h2>
-//       <ul className={classNames(s.list, s['pagination'])}>
-//         <li className={s.item}>
-//           <div className={s.commonBlock}>
-//             <div className={classNames(s.cart, s['page-item'])}>
-//               <img src={katrine} alt="" />
-//               <h3 className={s.sectionTitleInfo}>Katrine</h3>
-//               <button className={s.bt}>
-//                 <span className={s.text}>Learn more</span>{' '}
-//               </button>
-//             </div>
-//             <div className={s.cartSecond}>
-//               <img src={katrine} alt="" />
-//               <h3 className={s.name}>Katrine</h3>
-//               <button className={s.btn}>
-//                 <span className={s.textInside}>Learn more</span>{' '}
-//               </button>
-//             </div>
-//             <div className={s.cartThird}>
-//               <img src={katrine} alt="" />
-//               <h3 className={s.name}>Katrine</h3>
-//               <button className={s.btn}>
-//                 <span className={s.textInside}>Learn more</span>{' '}
-//               </button>
-//             </div>
-//           </div>
-//           <div className={s.posBtn}>
-//             {/* <ArrowLeft /> */}
-//             <div className={s.circle}>
-//               <img src={left} alt="" className={s.arrow} />
-//             </div>
-//             <div className={s.circleSecond}>
-//               <img src={right} alt="" className={s.arrow} />
-//             </div>
-//           </div>
-//           <button className={s.getToknow}>Get to know the rest</button>
-//         </li>
-//       </ul>
-//     </section>
-//   );
-// }
 
-// export default Carts;
-
+//=================затягиваю для модалки.
+import Modal from '../modalForCarts/modalCart.js';
+console.log(Modal);
 //! Вверху мой старый вариант
 class Carts extends React.Component {
   constructor() {
@@ -121,6 +74,9 @@ class Carts extends React.Component {
       isPrevBtnActive: 'disabled',
       isNextBtnActive: '',
       pageBound: 3,
+      showModal: false,
+      modalImage: '',
+      url: '',
     };
     this.handleClick = this.handleClick.bind(this);
     this.btnDecrementClick = this.btnDecrementClick.bind(this);
@@ -130,7 +86,16 @@ class Carts extends React.Component {
     // this.componentDidMount = this.componentDidMount.bind(this);
     this.setPrevAndNextBtnClass = this.setPrevAndNextBtnClass.bind(this);
   }
+  toggleModal = () => {
+    this.setState(({ showModal }) => ({
+      showModal: !showModal,
+    }));
+  };
+  openModal = modalImage => {
+    this.toggleModal();
 
+    this.setState({ modalImage });
+  };
   componentDidUpdate() {
     $('ul li.active').removeClass('active');
     $('ul li#' + this.state.currentPage).addClass('active');
