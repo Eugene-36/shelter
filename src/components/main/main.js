@@ -1,10 +1,10 @@
-import Navigation from '../navigation/navigation';
-import Hero from '../hero/hero';
-import AboutShelter from '../aboutTheShelter/aboutTheShelter';
-import Carts from '../cartsAnimal/cartsAnimal';
-import Help from '../help/help';
-import Donation from '../donation/donation';
-import Footer from '../footer/footer';
+import Navigation from '../navigation/Navigation';
+import Hero from '../hero/Hero';
+import AboutShelter from '../aboutTheShelter/AboutTheShelter';
+import Carts from '../cartsAnimal/CartsAnimal';
+import Help from '../help/Help';
+import Donation from '../donation/Donation';
+import Footer from '../footer/Footer';
 import s from '../../components/styles/base.module.css';
 import { v4 as uuidv4 } from 'uuid';
 

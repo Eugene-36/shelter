@@ -3,7 +3,7 @@ import s from './navigation.module.css';
 import burger from '../icons/Burger.svg';
 import { Link } from 'react-router-dom';
 
-import ModalNew from '../modal/modal';
+import ModalNew from '../modal/Modal';
 
 function Navigation() {
   return (

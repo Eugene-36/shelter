@@ -18,8 +18,8 @@ import $ from 'jquery';
 import { v4 as uuidv4 } from 'uuid';
 
 //=================затягиваю для модалки.
-import Modal from '../modalForCarts/modalCart.js';
-console.log(Modal);
+//import Modal from '../modalForCarts/ModalCart.js';
+//console.log(Modal);
 //! Вверху мой старый вариант
 class Carts extends React.Component {
   constructor() {

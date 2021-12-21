@@ -5,14 +5,14 @@ import s from '../src/components/styles/base.module.css';
 //import { Switch, Router, Route } from 'react-router-dom';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 // Импорт компонентов
-import Navigation from './components/navigation/navigation';
+import Navigation from './components/navigation/Navigation';
 // import Hero from './components/hero/hero';
 // import AboutShelter from './components/aboutTheShelter/aboutTheShelter';
 // import Carts from './components/cartsAnimal/cartsAnimal';
 // import Help from './components/help/help';
 // import Donation from './components/donation/donation';
-import Footer from './components/footer/footer';
-import OurPets from './components/ourPets/ourPets.js';
+import Footer from './components/footer/Footer';
+import OurPets from './components/ourPets/OurPets.js';
 import Main from './components/main/main';
 //! Тут нужно в класс добавить  "container" чтобы всё обернулось в рамки контейнера
 function App() {

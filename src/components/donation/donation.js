@@ -16,7 +16,11 @@ function Donation() {
                 <span className={s.spanText}>
                   Name of the bank / Type of bank account
                 </span>
-                <input type="text" className={s.inp} />
+                <input
+                  type="text"
+                  placeholder="4571 6610 2738 1607"
+                  className={s.inputDonation}
+                />
               </label>
             </form>
             <p className={s.descriprion}>
