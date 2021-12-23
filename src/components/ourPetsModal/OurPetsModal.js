@@ -1,21 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Modal from 'react-modal';
 import burger from '../icons/Burger.svg';
 import styles from './modal.module.css';
+import { getAllAnimals } from '../redux/global/global-selector';
+import { useSelector, useDispatch } from 'react-redux';
+import { addAnimals } from '../redux/global/global-operations';
 //import s from '../navigation/navigation.module.css'
 import { Link } from 'react-router-dom';
+import OurPetsCarts from '../ourOetsCarts/OurPetsCarts';
 //=============================================
-import { useSelector, useDispatch } from 'react-redux';
+
 import { getModalLogout } from '../redux/global/global-selector';
 import {
   isModalLogoutOpen,
   isModalLogoutClose,
 } from '../redux/global/global-action';
 import classNames from 'classnames';
+
 Modal.setAppElement('#root');
 
-function ModalWin() {
+function PetCartsModal() {
   const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(addAnimals());
+  }, [dispatch]);
+  const result = useSelector(getAllAnimals);
 
   const ModalLogoutOpen = () => dispatch(isModalLogoutOpen());
   const ModalLogoutClose = () => dispatch(isModalLogoutClose());
@@ -24,6 +33,9 @@ function ModalWin() {
   return (
     <div className={styles.burgerBtn}>
       <img src={burger} alt="" onClick={ModalLogoutOpen} />
+
+      {/* !============================================= */}
+      <OurPetsCarts props={() => ModalLogoutOpen} />
 
       <Modal
         isOpen={modalLogout}
@@ -50,51 +62,9 @@ function ModalWin() {
             />
           </div>
         </div>
-        <div className={styles.containerHead}>
-          <nav className={styles.navigation}>
-            <ul className={styles.siteNav}>
-              <li className={styles.item}>
-                <Link
-                  style={{ textDecoration: 'none' }}
-                  to="/"
-                  className={styles.link}
-                >
-                  About the shelter
-                </Link>
-              </li>
-              <li className={styles.item}>
-                <Link
-                  style={{ textDecoration: 'none' }}
-                  to="/pets"
-                  className={styles.link}
-                >
-                  Our pets
-                </Link>
-              </li>
-              <li className={styles.item}>
-                <Link
-                  style={{ textDecoration: 'none' }}
-                  to="/help"
-                  className={styles.link}
-                >
-                  Help the shelter
-                </Link>
-              </li>
-              <li className={styles.item}>
-                <Link
-                  style={{ textDecoration: 'none' }}
-                  to="/contacts"
-                  className={styles.link}
-                >
-                  Contacts
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        <div className={styles.containerHead}></div>
       </Modal>
     </div>
   );
 }
-
-export default ModalWin;
+export default PetCartsModal;

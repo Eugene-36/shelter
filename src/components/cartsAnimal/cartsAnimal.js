@@ -68,7 +68,7 @@ class Carts extends React.Component {
         },
       ],
       currentPage: 1,
-      todosPerPage: 2,
+      todosPerPage: 3,
       upperPageBound: 3,
       lowerPageBound: 0,
       isPrevBtnActive: 'disabled',
@@ -86,16 +86,7 @@ class Carts extends React.Component {
     // this.componentDidMount = this.componentDidMount.bind(this);
     this.setPrevAndNextBtnClass = this.setPrevAndNextBtnClass.bind(this);
   }
-  toggleModal = () => {
-    this.setState(({ showModal }) => ({
-      showModal: !showModal,
-    }));
-  };
-  openModal = modalImage => {
-    this.toggleModal();
 
-    this.setState({ modalImage });
-  };
   componentDidUpdate() {
     $('ul li.active').removeClass('active');
     $('ul li#' + this.state.currentPage).addClass('active');
@@ -301,15 +292,15 @@ class Carts extends React.Component {
           <h2 className={s.headText}>
             Our friends who <br /> are looking for a house
           </h2>
-          <ul className={s.commonBlock}>
-            <ul className={classNames(s.pos, ['pagination'])}>
-              {renderTodos}
-              {/* {pageDecrementBtn} */}
-              {/* {renderPageNumbers} */}
-              {/* {pageIncrementBtn} */}
-              {renderPrevBtn}
-              {renderNextBtn}
-            </ul>
+          {/* <ul className={s.commonBlock}> */}
+          <ul className={classNames(s.pos, ['pagination'])}>
+            {renderTodos}
+            {/* {pageDecrementBtn} */}
+            {/* {renderPageNumbers} */}
+            {/* {pageIncrementBtn} */}
+            {renderPrevBtn}
+            {renderNextBtn}
+            {/* </ul> */}
           </ul>
         </div>
       </section>

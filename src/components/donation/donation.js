@@ -2,6 +2,9 @@ import React from 'react';
 import s from './donation.module.css';
 import styleContainer from '../../components/styles/base.module.css';
 import donation from '../icons/donation-dog.png';
+import InputMask from 'react-input-mask';
+import $ from 'jquery';
+
 function Donation() {
   return (
     <section className={s.section}>
@@ -16,10 +19,13 @@ function Donation() {
                 <span className={s.spanText}>
                   Name of the bank / Type of bank account
                 </span>
-                <input
-                  type="text"
-                  placeholder="4571 6610 2738 1607"
+                {/* <input type="text" placeholder="4571 6610 2738 1607" /> */}
+                <InputMask
                   className={s.inputDonation}
+                  placeholder="Enter your card numbers"
+                  mask="9999 9999 9999 9999"
+                  pattern="^\d{4} \d{4} \d{4} \d{4}$"
+                  required
                 />
               </label>
             </form>

@@ -1,3 +1,4 @@
+import React from 'react';
 import Navigation from '../navigation/Navigation';
 import Hero from '../hero/Hero';
 import AboutShelter from '../aboutTheShelter/AboutTheShelter';

@@ -52,7 +52,7 @@ li {
   color: #292929;
 }
 .commonBlock {
-  padding-bottom: 50px;
+  padding-bottom: 70px;
 }
 /* .posBtn {
   display: flex;
@@ -98,7 +98,7 @@ li {
 
   position: absolute;
   right: 70%;
-  bottom: 0;
+  bottom: 2%;
 }
 .circleSecond {
   width: 40px;
@@ -108,7 +108,7 @@ li {
 
   position: absolute;
   right: 15%;
-  bottom: 0;
+  bottom: 2%;
 }
 .arrow {
   margin-top: 10px;
@@ -132,8 +132,10 @@ li {
   color: #545454;
 }
 
-/* ? А вот и Таджики подъехали */
 @media (min-width: 320px) {
+  .pos > .commonBlock:not(:first-child) {
+    display: none;
+  }
   .cartSecond {
     display: none;
   }
@@ -152,6 +154,11 @@ li {
     display: block;
     background: #fafafa;
   }
+
+  .pos > .commonBlock:nth-child(2) {
+    display: block;
+  }
+
   .name {
     margin-top: 30px;
     color: #545454;
@@ -221,6 +228,10 @@ li {
   }
 }
 @media (min-width: 1280px) {
+  .pos > .commonBlock:nth-child(3) {
+    display: block;
+  }
+
   .cartThird {
     width: 270px;
     min-height: 435px;

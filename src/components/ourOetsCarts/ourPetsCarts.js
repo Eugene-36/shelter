@@ -2,20 +2,35 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addAnimals } from '../redux/global/global-operations';
 import { getAllAnimals } from '../redux/global/global-selector';
+import PetCartsModal from '../ourPetsModal/OurPetsModal';
+import Modal from 'react-modal';
+//================================================================
 import tickRight from '../icons/single-tick-right.svg';
 import doubleTick from '../icons/double-tick.svg';
 import tickLeft from '../icons/tick-left.svg';
 import doubleTickLeft from '../icons/double-tick-left.svg';
 import s from './ourPetsCarts.module.css';
 import styleContainer from '../../components/styles/base.module.css';
-
-function OurPetsCarts() {
+//=====================
+Modal.setAppElement('#root');
+//=======================
+function OurPetsCarts({ ModalLogoutOpen }) {
+  console.log('ModalLogoutOpen', ModalLogoutOpen);
+  //================================================
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(addAnimals());
   }, [dispatch]);
   const result = useSelector(getAllAnimals);
+  console.log('result', result);
+
   const linkUrl = 'https://murmuring-woodland-80890.herokuapp.com/';
+
+  //! Модалка чтобы показать инфу про животных
+  const showModalPets = () => {
+    console.log('Клик есть');
+    return <PetCartsModal />;
+  };
   return (
     <>
       <section className={s.back}>
@@ -23,6 +38,7 @@ function OurPetsCarts() {
           <h2 className={s.headText}>
             Our friends who <br /> are looking for a house
           </h2>
+
           <ul className={s.list}>
             <li className={s.item}>
               <div className={s.commonBlock}>
@@ -30,7 +46,7 @@ function OurPetsCarts() {
                   <div className={s.cart} key={id}>
                     <img src={`${linkUrl}${img}`} alt="" />
                     <h3 className={s.sectionTitleInfo}>{name}</h3>
-                    <button className={s.bt}>
+                    <button className={s.bt} onClick={showModalPets}>
                       <span className={s.text}>{button}</span>{' '}
                     </button>
                   </div>
