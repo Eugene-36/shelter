@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import burger from '../icons/Burger.svg';
 import s from './ourPets.module.css';
 import Footer from '../footer/Footer';
-import OurPetsCarts from '../ourOetsCarts/OurPetsCarts';
+import OurPetsCarts from '../ourPetsCarts/OurPetsCarts';
 import styleContainer from '../../components/styles/base.module.css';
 
 function OurPets() {

@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Modal from 'react-modal';
+import axios from 'axios';
 import burger from '../icons/Burger.svg';
 import styles from './modal.module.css';
 import { getAllAnimals } from '../redux/global/global-selector';
@@ -7,7 +8,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { addAnimals } from '../redux/global/global-operations';
 //import s from '../navigation/navigation.module.css'
 import { Link } from 'react-router-dom';
-import OurPetsCarts from '../ourOetsCarts/OurPetsCarts';
+import OurPetsCarts from '../ourPetsCarts/OurPetsCarts';
 //=============================================
 
 import { getModalLogout } from '../redux/global/global-selector';
@@ -19,24 +20,25 @@ import classNames from 'classnames';
 
 Modal.setAppElement('#root');
 
-function PetCartsModal() {
+function PetCartsModal({ props }) {
+  const [state, setState] = useState({ animals: [] });
+  const [show, setShow] = useState(false);
+  const [personState, setPersonState] = useState();
+
   const dispatch = useDispatch();
+  const ModalLogoutOpen = () => dispatch(isModalLogoutOpen());
+  const ModalLogoutClose = () => dispatch(isModalLogoutClose());
+
   useEffect(() => {
     dispatch(addAnimals());
   }, [dispatch]);
-  const result = useSelector(getAllAnimals);
+  const animals = useSelector(getAllAnimals);
+  console.log('result из OurPetsModal', animals);
 
-  const ModalLogoutOpen = () => dispatch(isModalLogoutOpen());
-  const ModalLogoutClose = () => dispatch(isModalLogoutClose());
   const modalLogout = useSelector(getModalLogout);
 
   return (
     <div className={styles.burgerBtn}>
-      <img src={burger} alt="" onClick={ModalLogoutOpen} />
-
-      {/* !============================================= */}
-      <OurPetsCarts props={() => ModalLogoutOpen} />
-
       <Modal
         isOpen={modalLogout}
         onRequestClose={ModalLogoutClose}
@@ -46,20 +48,23 @@ function PetCartsModal() {
       >
         <div className={styles.logoPosition}>
           <div className={styles.under}>
-            <a href="./index.html" className="logo link-underline">
-              <span className={styles.cozyStyle}>Cozy House</span>
-            </a>
-            <span className={styles.subtitle}>Shelter for pets in Boston</span>
-          </div>
-        </div>
-        <div className={classNames(styles['cl-btn-2'])}>
-          <div>
-            <img
-              onClick={ModalLogoutClose}
-              src={burger}
-              className={styles.burgerMenu}
-              alt=""
-            />
+            {animals.map(animal => (
+              <>
+                <div
+                  style={{ width: '18rem' }}
+                  className="portfolio-card"
+                  onClick={() => {
+                    ModalLogoutOpen();
+                    setPersonState(animal);
+                  }}
+                >
+                  <div>
+                    <p>{animal.name}</p>
+                    <p>{animal.img}</p>
+                  </div>
+                </div>
+              </>
+            ))}
           </div>
         </div>
         <div className={styles.containerHead}></div>
@@ -68,3 +73,9 @@ function PetCartsModal() {
   );
 }
 export default PetCartsModal;
+
+{
+  /* <PetCartsModal props={result} className={s.bt}>
+<span className={s.text}>{button}</span>{' '}
+</PetCartsModal> */
+}

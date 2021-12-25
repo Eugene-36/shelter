@@ -1,0 +1,10 @@
+.bt {
+  border: 2px solid #f1cdb3;
+  box-sizing: border-box;
+  border-radius: 100px;
+  align-items: center;
+
+  padding: 15px 45px;
+  margin-top: 42px;
+  margin-bottom: 30px;
+}
