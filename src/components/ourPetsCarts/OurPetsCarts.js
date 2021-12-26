@@ -40,27 +40,21 @@ function OurPetsCarts() {
   const ModalLogoutClose = () => dispatch(isModalLogoutClose());
   const modalLogout = useSelector(getModalLogout);
 
-  const singleCart = (id, e) => {
+  const singleCart = async (id, e) => {
     //singleCartAnimal = singleCartAnimalNew;
 
-    let cart = result.filter(item => item._id === id);
-    setState(cart);
+    if (result) {
+      let cart = result.filter(item => item._id === id);
+      setState(cart);
+      ModalLogoutOpen();
+      console.log('singleCart', state);
+    }
+
     // console.log('singleCartAnimal', singleCartAnimal);
-    ModalLogoutOpen();
+
     console.log('e.target', id);
-    console.log('singleCart', result);
-
-    // function b(idToSearch) {
-    //   return a.filter(item => {
-    //     return item.id === idToSearch
-    //   })
-    // };
-
-    // const onRemove = (id) => {
-    //   setTodos((prevState) => prevState.filter((item) => item.id !== id));
-    // };
   };
-  console.log('state', state.cart);
+  //console.log('state', state.cart);
   // Проверка state на undefined
   // console.log(Boolean(state));
   // if (state.cart === undefined) {
@@ -129,7 +123,7 @@ function OurPetsCarts() {
                           </div>
                         );
                       })} */}
-                      {state.cart !== undefined
+                      {/* {state.cart !== undefined
                         ? state.cart.map(
                             ({
                               name,
@@ -157,7 +151,7 @@ function OurPetsCarts() {
                               </>
                             ),
                           )
-                        : console.log('ничего нет')}
+                        : console.log('ничего нет')} */}
                     </div>
                   </div>
                   <div className={s.containerHead}></div>
