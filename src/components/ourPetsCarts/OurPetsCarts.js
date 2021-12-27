@@ -101,16 +101,14 @@ function OurPetsCarts() {
                           }) => (
                             <>
                               <div>
-                                <div>
-                                  <p>{name}</p>
-                                  <p>{subtitle}</p>
-                                  <p>{description}</p>
-                                  <p>{age}</p>
-                                  <p>{inoculations}</p>
-                                  <p>{diseases}</p>
-                                  <p>{parasites}</p>
-                                  <img src={`${linkUrl}${img}`} alt="" />
-                                </div>
+                                <p>{name}</p>
+                                <p>{subtitle}</p>
+                                <p>{description}</p>
+                                <p>{age}</p>
+                                <p>{inoculations}</p>
+                                <p>{diseases}</p>
+                                <p>{parasites}</p>
+                                <img src={`${linkUrl}${img}`} alt="" />
                               </div>
                             </>
                           ),
