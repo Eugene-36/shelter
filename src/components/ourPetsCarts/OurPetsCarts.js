@@ -23,7 +23,7 @@ Modal.setAppElement('#root');
 //=======================
 function OurPetsCarts() {
   const [state, setState] = useState([]);
-  //console.log('ModalLogoutOpen', ModalLogoutOpen);
+
   //================================================
   const dispatch = useDispatch();
   useEffect(() => {
@@ -31,7 +31,6 @@ function OurPetsCarts() {
   }, [dispatch]);
 
   const result = useSelector(getAllAnimals);
-  //console.log('result: OurPetsCarts', result);
 
   const linkUrl = 'https://murmuring-woodland-80890.herokuapp.com/';
 
@@ -40,26 +39,16 @@ function OurPetsCarts() {
   const ModalLogoutClose = () => dispatch(isModalLogoutClose());
   const modalLogout = useSelector(getModalLogout);
 
-  const singleCart = async (id, e) => {
-    //singleCartAnimal = singleCartAnimalNew;
-
-    if (result) {
-      let cart = result.filter(item => item._id === id);
-      setState(cart);
-      ModalLogoutOpen();
-      console.log('singleCart', state);
-    }
-
-    // console.log('singleCartAnimal', singleCartAnimal);
+  const singleCart = (id, e) => {
+    let cart = result.filter(item => item._id === id);
+    console.log('cart первый клик', cart);
+    setState(cart);
+    ModalLogoutOpen();
 
     console.log('e.target', id);
   };
-  //console.log('state', state.cart);
-  // Проверка state на undefined
-  // console.log(Boolean(state));
-  // if (state.cart === undefined) {
-  //   return null;
-  // }
+  console.log('singleCart', state);
+
   return (
     <>
       <section className={s.back}>
@@ -98,60 +87,34 @@ function OurPetsCarts() {
                   <div className={s.logoPosition}>
                     <div className={s.under}>
                       <p>Модалка открылась</p>
-                      {/* {state.cart.map(function ({
-                        name,
-                        subtitle,
-                        description,
-                        age,
-                        inoculations,
-                        diseases,
-                        parasites,
-                        img,
-                      }) {
-                        return (
-                          <div>
-                            <div>
-                              <p>{name}</p>
-                              <p>{subtitle}</p>
-                              <p>{description}</p>
-                              <p>{age}</p>
-                              <p>{inoculations}</p>
-                              <p>{diseases}</p>
-                              <p>{parasites}</p>
-                              <img src={`${linkUrl}${img}`} alt="" />
-                            </div>
-                          </div>
-                        );
-                      })} */}
-                      {/* {state.cart !== undefined
-                        ? state.cart.map(
-                            ({
-                              name,
-                              subtitle,
-                              description,
-                              age,
-                              inoculations,
-                              diseases,
-                              parasites,
-                              img,
-                            }) => (
-                              <>
+                      {state.length &&
+                        state.map(
+                          ({
+                            name,
+                            subtitle,
+                            description,
+                            age,
+                            inoculations,
+                            diseases,
+                            parasites,
+                            img,
+                          }) => (
+                            <>
+                              <div>
                                 <div>
-                                  <div>
-                                    <p>{name}</p>
-                                    <p>{subtitle}</p>
-                                    <p>{description}</p>
-                                    <p>{age}</p>
-                                    <p>{inoculations}</p>
-                                    <p>{diseases}</p>
-                                    <p>{parasites}</p>
-                                    <img src={`${linkUrl}${img}`} alt="" />
-                                  </div>
+                                  <p>{name}</p>
+                                  <p>{subtitle}</p>
+                                  <p>{description}</p>
+                                  <p>{age}</p>
+                                  <p>{inoculations}</p>
+                                  <p>{diseases}</p>
+                                  <p>{parasites}</p>
+                                  <img src={`${linkUrl}${img}`} alt="" />
                                 </div>
-                              </>
-                            ),
-                          )
-                        : console.log('ничего нет')} */}
+                              </div>
+                            </>
+                          ),
+                        )}
                     </div>
                   </div>
                   <div className={s.containerHead}></div>
