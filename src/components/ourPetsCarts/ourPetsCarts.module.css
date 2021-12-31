@@ -337,3 +337,82 @@
   margin-top: 42px;
   margin-bottom: 30px;
 } */
+
+/** Cтили для модального окна  */
+.photo {
+  display: flex;
+  flex-flow: row-reverse;
+  justify-content: space-around;
+}
+.modalContent {
+  width: 900px;
+  height: 500px;
+
+  position: absolute;
+  /* inset: 40px; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgb(204, 204, 204);
+  background: rgb(255, 255, 255);
+  /* overflow: auto; */
+  border-radius: 9px;
+  outline: none;
+  padding: 20px;
+}
+.listItems {
+  width: 300px;
+}
+.petSize {
+  height: 400px;
+}
+.petName {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 130%;
+  margin-bottom: 10px;
+
+  letter-spacing: 0.06em;
+  color: #000000;
+}
+.subtitle {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 115%;
+
+  letter-spacing: 0.06em;
+  margin-bottom: 40px;
+  color: #000000;
+}
+.text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 110%;
+  text-align: inherit;
+  margin-bottom: 40px;
+  /* or 17px */
+
+  letter-spacing: 0.06em;
+  color: #000000;
+}
+.space:not(:last-child) {
+  margin-bottom: 10px;
+}
+.closeModal {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #f1cdb3;
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+  top: -8%;
+  right: -5%;
+}
+
+.close {
+  display: inline-block;
+}
