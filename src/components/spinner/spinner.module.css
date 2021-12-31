@@ -1,7 +1,19 @@
 .box {
   perspective: 200px;
-
   margin-left: 525px;
+}
+
+@media (min-width: 768px) {
+  .box {
+    margin-left: 50px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .box {
+    perspective: 200px;
+    margin-left: 525px;
+  }
 }
 
 .plane {

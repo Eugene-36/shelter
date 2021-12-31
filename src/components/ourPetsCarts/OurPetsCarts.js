@@ -134,7 +134,7 @@ function OurPetsCarts() {
                                   <b> Parasites:</b> {parasites}
                                 </li>
                               </ul>
-                              <div>
+                              <div className={s.petBlock}>
                                 <img
                                   className={s.petSize}
                                   src={`${linkUrl}${img}`}
