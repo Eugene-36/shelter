@@ -6,11 +6,10 @@ body {
   /* background-color: #e7eaf2; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
 }
-* {
+/* * {
   outline: 1px solid tomato;
-}
+} */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
