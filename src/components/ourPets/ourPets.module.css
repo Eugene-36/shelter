@@ -76,8 +76,8 @@
   .siteNav {
     display: none;
   }
-  .item {
-    margin-right: 10px;
+  .item:not(:last-child) {
+    margin-right: 15px;
   }
 }
 @media (min-width: 768px) {

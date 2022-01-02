@@ -34,7 +34,6 @@ function OurPets() {
                 <li className={s.item}>
                   <a
                     style={{ textDecoration: 'none', color: '#545454' }}
-                    href=""
                     className={s.link}
                   >
                     Our pets

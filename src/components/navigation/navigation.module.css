@@ -84,8 +84,8 @@
   .siteNav {
     display: none;
   }
-  .item {
-    margin-right: 10px;
+  .item:not(:last-child) {
+    margin-right: 15px;
   }
   .burger {
     margin-left: 0px;

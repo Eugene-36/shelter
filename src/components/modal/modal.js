@@ -16,10 +16,23 @@ Modal.setAppElement('#root');
 
 function ModalWin() {
   const dispatch = useDispatch();
-
+  const body = document.querySelector('body');
+  body.style.overflow = 'auto';
   const ModalLogoutOpen = () => dispatch(isModalLogoutOpen());
   const ModalLogoutClose = () => dispatch(isModalLogoutClose());
   const modalLogout = useSelector(getModalLogout);
+
+  const truthyStatment = Boolean(modalLogout);
+
+  if (modalLogout) {
+    body.style.overflow = 'hidden';
+    console.log('modalLogout', modalLogout);
+  } else {
+    body.style.overflow = 'auto';
+  }
+  // const deleteOverflow = () => {
+  //   body.style.overflow = 'auto';
+  // };
 
   return (
     <div className={styles.burgerBtn}>

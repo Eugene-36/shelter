@@ -344,11 +344,12 @@
   flex-flow: row-reverse;
   justify-content: space-around;
 }
+
 .modalContent {
   /*! Тут тоже можно будет менят на следующем брейкпоинте  */
 
   width: 240px;
-  height: 510px;
+  height: 525px;
 
   position: absolute;
   /* inset: 40px; */
@@ -365,7 +366,7 @@
 @media (min-width: 768px) {
   .modalContent {
     width: 630px;
-    height: 450px;
+    height: 475px;
   }
 }
 @media (min-width: 1280px) {

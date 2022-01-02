@@ -165,7 +165,7 @@ class Carts extends React.Component {
   }
   render() {
     const { pro } = this.props;
-    console.log(pro);
+    //console.log(pro);
     const {
       todos,
       currentPage,
@@ -182,7 +182,7 @@ class Carts extends React.Component {
     const currentTodos = todos.slice(indexOfFirstTodo, indexOfLastTodo);
 
     const renderTodos = currentTodos.map(({ pic, name, id }) => {
-      console.log(id);
+      // console.log(id);
       return (
         <div key={id} className={s.commonBlock}>
           <div key={pro} className={classNames(s.cart, s['page-item'])}>

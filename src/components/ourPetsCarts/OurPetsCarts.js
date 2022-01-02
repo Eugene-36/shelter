@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addAnimals } from '../redux/global/global-operations';
 import { getAllAnimals } from '../redux/global/global-selector';
-import PetCartsModal from '../ourPetsModal/OurPetsModal';
+
 import Modal from 'react-modal';
 //==========================================
 import Spinner from '../spinner/Spinner.js';
@@ -28,7 +28,9 @@ Modal.setAppElement('#root');
 //=======================
 function OurPetsCarts() {
   const [state, setState] = useState([]);
+
   const body = document.querySelector('body');
+  body.style.overflow = 'auto';
   //================================================
   const dispatch = useDispatch();
   useEffect(() => {
@@ -44,29 +46,28 @@ function OurPetsCarts() {
   const ModalLogoutClose = () => dispatch(isModalLogoutClose());
   const modalLogout = useSelector(getModalLogout);
 
-  const singleCart = id => {
+  const singleCart = (id, e) => {
+    e.preventDefault();
     let cart = result.filter(item => item._id === id);
-
     setState(cart);
-    ModalLogoutOpen();
-
-    console.log('e.target', id);
   };
-  console.log('singleCart', state);
 
-  const truthyStatment = Boolean(modalLogout);
-
-  if (truthyStatment) {
+  if (state.length > 0) {
     body.style.overflow = 'hidden';
-  } else {
-    body.style.overflow = 'auto';
+    console.log('Из if блока', modalLogout);
   }
+  const closeModal = () => {
+    setState([]);
+    ModalLogoutClose();
+    body.style.overflow = 'auto';
+  };
+  console.log('state.length', state.length);
+  console.log('state', Boolean(state.length));
 
   return (
     <>
       <section className={s.back}>
         <div className={styleContainer.container}>
-          {/* <PetCartsModal /> */}
           <h2 className={s.headText}>
             Our friends who <br /> are looking for a house
           </h2>
@@ -74,36 +75,38 @@ function OurPetsCarts() {
           <ul className={s.list}>
             <li className={s.item}>
               <div className={s.commonBlock}>
-                {result.length === 0 ? (
-                  <Spinner />
-                ) : (
+                {result.length !== 0 ? (
                   result.map(({ name, img, id, button, _id }) => (
                     <div className={s.cart} key={id}>
                       <img src={`${linkUrl}${img}`} alt="" />
                       <h3 className={s.sectionTitleInfo}>{name}</h3>
-                      <button className={s.bt} onClick={() => singleCart(_id)}>
-                        {/*  onClick={'s'} */}
-                        <span className={s.text}>
-                          {button}
-                          {/* {_id} */}
-                        </span>
+                      <button
+                        className={s.bt}
+                        onClick={e => {
+                          singleCart(_id, e);
+                          ModalLogoutOpen();
+                        }}
+                      >
+                        <span className={s.text}>{button}</span>
                       </button>
                     </div>
                   ))
+                ) : (
+                  <Spinner />
                 )}
               </div>
               {/* ==================== */}
-              <div className={s.burgerBtn}>
+              {Boolean(state.length) && (
                 <Modal
                   isOpen={modalLogout}
-                  onRequestClose={ModalLogoutClose}
+                  onRequestClose={closeModal}
                   className={s.modalContent}
                   overlayClassName={s.modalOverlay}
                   contentLabel="Example Modal"
                 >
                   <div className={s.logoPosition}>
                     <div className={s.under}>
-                      {state.length &&
+                      {Boolean(state.length) &&
                         state.map(
                           ({
                             name,
@@ -146,11 +149,18 @@ function OurPetsCarts() {
                         )}
                     </div>
                   </div>
-                  <div onClick={ModalLogoutClose} className={s.closeModal}>
-                    <img src={close} alt="" />
+                  <div
+                    onClick={e => {
+                      ModalLogoutClose();
+                      closeModal();
+                    }}
+                    className={s.closeModal}
+                  >
+                    <img src={close} alt="cross" />
                   </div>
                 </Modal>
-              </div>
+              )}
+
               {/* =============== */}
 
               <div className={s.posBtn}>
