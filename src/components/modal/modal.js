@@ -2,7 +2,7 @@ import React from 'react';
 import Modal from 'react-modal';
 import burger from '../icons/Burger.svg';
 import styles from './modal.module.css';
-//import s from '../navigation/navigation.module.css'
+
 import { Link } from 'react-router-dom';
 //=============================================
 import { useSelector, useDispatch } from 'react-redux';
@@ -22,17 +22,12 @@ function ModalWin() {
   const ModalLogoutClose = () => dispatch(isModalLogoutClose());
   const modalLogout = useSelector(getModalLogout);
 
-  const truthyStatment = Boolean(modalLogout);
-
   if (modalLogout) {
     body.style.overflow = 'hidden';
     console.log('modalLogout', modalLogout);
   } else {
     body.style.overflow = 'auto';
   }
-  // const deleteOverflow = () => {
-  //   body.style.overflow = 'auto';
-  // };
 
   return (
     <div className={styles.burgerBtn}>

@@ -19,7 +19,7 @@ function Donation() {
                 <span className={s.spanText}>
                   Name of the bank / Type of bank account
                 </span>
-                {/* <input type="text" placeholder="4571 6610 2738 1607" /> */}
+
                 <InputMask
                   className={s.inputDonation}
                   placeholder="Enter your card numbers"

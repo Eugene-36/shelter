@@ -17,10 +17,6 @@ import $ from 'jquery';
 
 import { v4 as uuidv4 } from 'uuid';
 
-//=================затягиваю для модалки.
-//import Modal from '../modalForCarts/ModalCart.js';
-//console.log(Modal);
-//! Вверху мой старый вариант
 class Carts extends React.Component {
   constructor() {
     super();
@@ -196,18 +192,8 @@ class Carts extends React.Component {
           </div>
         </div>
       );
-      // <div className={s.commonBlock}>
-      // <div className={classNames(s.cart, s['page-item'])}>
-      //              <img src={katrine} alt="" />
-      //              <h3 className={s.sectionTitleInfo}>Katrine</h3>
-      //             <button className={s.bt}>
-      //                <span className={s.text}>Learn more</span>{' '}
-      //             </button>
-      //           </div>
     });
-    //  console.log(renderTodos);
-    // ! Тут ЛИШКИ - Мои карточки.
-    // Logic for displaying page numbers
+
     const pageNumbers = [];
     for (let i = 1; i <= Math.ceil(todos.length / todosPerPage); i++) {
       pageNumbers.push(i);
@@ -295,12 +281,9 @@ class Carts extends React.Component {
           {/* <ul className={s.commonBlock}> */}
           <ul className={classNames(s.pos, ['pagination'])}>
             {renderTodos}
-            {/* {pageDecrementBtn} */}
-            {/* {renderPageNumbers} */}
-            {/* {pageIncrementBtn} */}
+
             {renderPrevBtn}
             {renderNextBtn}
-            {/* </ul> */}
           </ul>
         </div>
       </section>

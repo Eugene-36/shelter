@@ -15,16 +15,9 @@ function AboutShelter() {
   return (
     <section className={s.sectionAbout}>
       <div className={s.containerAb}>
-        {/* <h2 className={s.sectionTitle}>
-          About the shelter <br />
-          “Cozy House”
-        </h2> */}
         <ul className={s.list}>
           <li className={s.listQualitiesText}>
             <div className={s.iconAntenna}>
-              {/* <svg class="antenna" width="70px" height="70px">
-                <use href="./img/all-icon/sprite-opt.svg#icon-antenna"></use>
-              </svg> */}
               <div className={s.blockText}>
                 <h2 className={s.sectionTitle}>
                   About the shelter <br />
@@ -55,7 +48,7 @@ function AboutShelter() {
         {isDesktopOrLaptop && (
           <img className={s.aboutDog} src={whitePet} alt="" />
         )}
-        {/* {isBigScreen && <img className={s.aboutDog} src={whitePet} alt="" />} */}
+
         {isTabletOrMobile && (
           <img className={s.aboutDog} src={whitePet} alt="" />
         )}

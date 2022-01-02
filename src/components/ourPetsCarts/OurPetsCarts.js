@@ -54,15 +54,12 @@ function OurPetsCarts() {
 
   if (state.length > 0) {
     body.style.overflow = 'hidden';
-    console.log('Из if блока', modalLogout);
   }
   const closeModal = () => {
     setState([]);
     ModalLogoutClose();
     body.style.overflow = 'auto';
   };
-  console.log('state.length', state.length);
-  console.log('state', Boolean(state.length));
 
   return (
     <>
@@ -164,7 +161,6 @@ function OurPetsCarts() {
               {/* =============== */}
 
               <div className={s.posBtn}>
-                {/* <ArrowLeft /> */}
                 <div className={s.circle}>
                   <img src={doubleTickLeft} alt="" className={s.arrow} />
                 </div>
@@ -172,7 +168,6 @@ function OurPetsCarts() {
                   <img src={tickLeft} alt="" className={s.arrow} />
                 </div>
                 <div className={s.circleCenter}>
-                  {/* <img src={doubleTick} alt="" className={s.arrow} /> */}
                   <span className={s.digit}>1</span>
                 </div>
                 <div className={s.circleSecond}>
@@ -182,7 +177,6 @@ function OurPetsCarts() {
                   <img src={tickRight} alt="" className={s.arrow} />
                 </div>
               </div>
-              {/* <button className={s.getToknow}>Get to know the rest</button> */}
             </li>
           </ul>
         </div>

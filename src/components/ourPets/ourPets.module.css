@@ -10,9 +10,6 @@
 .containerHead {
   display: flex;
 }
-/* .burger {
-  margin-left: 45px;
-} */
 
 .subtitle {
   margin-top: 10px;
@@ -32,7 +29,6 @@
 
   letter-spacing: 0.1em;
   color: #545454;
-  /* ! Не забудь поставить белый цвет, когда сделаешь background */
 }
 .containerHead {
   padding-top: 30px;
@@ -69,8 +65,6 @@
   background: #f1cdb3;
   border-radius: 2px;
 }
-/* ! Тут пошла рыгать адаптивка  */
-/* display: flex; надо дать на navigation */
 
 @media (min-width: 320px) {
   .siteNav {
@@ -95,23 +89,12 @@
     display: flex;
     justify-content: space-between;
   }
-  /* .item {
-      margin-right: 25px;
-    } */
-  /* li:nth-last-child(n + 2) {
-      margin-right: 25px;
-    } */
 }
 
-/* @media (min-width: 1280px) {
-  .siteNav {
-    margin-left: 550px;
-  }
-} */
 @media (min-width: 1280px) {
   .navigation {
     min-width: 100%;
-    /* display: flex; */
+
     justify-content: space-between;
   }
 }

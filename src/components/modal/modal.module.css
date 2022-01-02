@@ -15,21 +15,6 @@
   padding-right: 0;
   padding-left: 0;
 }
-/* .modalContent {
-  width: 320px;
-  height: 260px;
-  padding-top: 100px;
-  padding-left: 20px;
-  border-radius: 20px;
-  outline: none;
-  background-color: #ffff;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-} */
 
 .modalOverlay {
   position: fixed;
@@ -38,8 +23,6 @@
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.2);
-
- 
 }
 
 .btnAdd {
@@ -69,12 +52,12 @@
     height: 823px;
     padding-top: 100px;
     padding-left: 20px;
-    /* border-radius: 20px; */
+
     background: #292929;
     position: absolute;
     top: 0;
     right: 0;
-    /* bottom: 0; */
+
     left: 0;
     margin: auto;
   }
@@ -246,16 +229,9 @@
 
   letter-spacing: 0.1em;
   color: #ffffff;
-  /* ! Не забудь поставить белый цвет, когда сделаешь background */
 }
-/* .navigation {
-  display: flex;
-  min-width: 100%;
-  justify-content: space-between;
-} */
 
 .containerHead {
-  /* padding-top: 30px; */
   margin-left: 10px;
   position: absolute;
   left: 30%;
@@ -297,16 +273,7 @@
   border-radius: 2px;
 }
 
-/* ! Тут пошла рыгать адаптивка  */
-/* display: flex; надо дать на navigation */
-
 @media (min-width: 320px) {
-  /* .siteNav {
-    display: none;
-  } */
-  /* .item {
-    margin-right: 10px;
-  } */
   .burger {
     margin-left: 0px;
   }
@@ -324,7 +291,7 @@
   .siteNav {
     display: block;
     display: flex;
-    /* margin-left: 62px; */
+
     align-items: center;
   }
   .navigation {
@@ -332,12 +299,7 @@
     display: flex;
     justify-content: space-between;
   }
-  /* .item {
-    margin-right: 25px;
-  } */
-  /* li:nth-last-child(n + 2) {
-    margin-right: 25px;
-  } */
+
   .containerHead {
     margin-left: 10px;
     position: absolute;
@@ -355,7 +317,7 @@
 @media (min-width: 1280px) {
   .navigation {
     min-width: 100%;
-    /* display: flex; */
+
     justify-content: space-between;
   }
 }
