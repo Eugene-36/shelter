@@ -3,8 +3,6 @@ import s from './aboutTheShelter.module.css';
 import whitePet from '../icons/about-pets.png';
 import { useMediaQuery } from 'react-responsive';
 
-console.log(useMediaQuery);
-
 function AboutShelter() {
   const isDesktopOrLaptop = useMediaQuery({
     query: '(min-width: 1224px)',
