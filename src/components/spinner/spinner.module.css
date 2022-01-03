@@ -1,9 +1,11 @@
 .box {
   perspective: 200px;
-  margin-left: 525px;
+  display: flex;
+  justify-content: center;
+  /* margin-left: 525px; */
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .box {
     margin-left: 50px;
   }
@@ -14,7 +16,7 @@
     perspective: 200px;
     margin-left: 525px;
   }
-}
+} */
 
 .plane {
   width: 5em;

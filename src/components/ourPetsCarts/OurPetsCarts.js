@@ -71,7 +71,7 @@ function OurPetsCarts() {
 
           <ul className={s.list}>
             <li className={s.item}>
-              <div className={s.commonBlock}>
+              <div className={result.length > 0 ? s.commonBlock : null}>
                 {result.length !== 0 ? (
                   result.map(({ name, img, id, button, _id }) => (
                     <div className={s.cart} key={id}>
