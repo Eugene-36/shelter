@@ -6,6 +6,9 @@
     ),
     #211f20;
 }
+a:hover {
+  color: white;
+}
 .mainText {
   font-style: normal;
   font-weight: normal;

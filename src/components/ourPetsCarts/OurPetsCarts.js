@@ -39,7 +39,6 @@ function OurPetsCarts() {
 
   const linkUrl = 'https://murmuring-woodland-80890.herokuapp.com/';
 
-  //! Модалка чтобы показать инфу про животных========================================
   const ModalLogoutOpen = () => dispatch(isModalLogoutOpen());
   const ModalLogoutClose = () => dispatch(isModalLogoutClose());
   const modalLogout = useSelector(getModalLogout);

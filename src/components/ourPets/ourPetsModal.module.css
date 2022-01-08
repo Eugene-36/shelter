@@ -326,20 +326,7 @@
     justify-content: space-between;
   }
 }
-.ReactModal__Overlay {
-}
 
-.ReactModal__Overlay--after-open {
-  opacity: 1;
-}
-
-.ReactModal__Overlay--before-close {
-  opacity: 0;
-}
-.override {
-  opacity: 1;
-  transition: opacity 2000ms ease-in-out;
-}
 .overHidden {
   overflow: hidden;
 }
