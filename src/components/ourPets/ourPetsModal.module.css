@@ -1,11 +1,16 @@
+/*! Modal styling  */
+
 .burgerBtn {
   display: flex;
   margin-right: 10px;
   cursor: pointer;
 }
+.burger {
+  cursor: pointer;
+}
 .burgerMenu {
-  top: 40%;
-  left: 15%;
+  top: 2%;
+  left: 70%;
   position: absolute;
   transform: rotate(90deg);
   cursor: pointer;
@@ -40,10 +45,6 @@
   color: #ffffff;
   outline: none;
   z-index: 2;
-}
-
-.overHidden {
-  overflow: hidden;
 }
 
 @media (min-width: 320px) {
@@ -146,7 +147,7 @@
   position: absolute;
   height: 68px;
   width: 50px;
-  top: 0;
+
   right: 2%;
 }
 .cl-btn-2 .leftright {
@@ -266,7 +267,7 @@
   display: flex;
   justify-content: center;
 }
-.item:first-child::after {
+.item:nth-child(2)::after {
   content: '';
   position: absolute;
   display: block;
@@ -324,4 +325,21 @@
 
     justify-content: space-between;
   }
+}
+.ReactModal__Overlay {
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+.override {
+  opacity: 1;
+  transition: opacity 2000ms ease-in-out;
+}
+.overHidden {
+  overflow: hidden;
 }

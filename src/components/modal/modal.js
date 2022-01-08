@@ -4,40 +4,31 @@ import burger from '../icons/Burger.svg';
 import styles from './modal.module.css';
 
 import { Link } from 'react-router-dom';
-//=============================================
-import { useSelector, useDispatch } from 'react-redux';
-import { getModalLogout } from '../redux/global/global-selector';
-import {
-  isModalLogoutOpen,
-  isModalLogoutClose,
-} from '../redux/global/global-action';
+
 import classNames from 'classnames';
 Modal.setAppElement('#root');
 
 function ModalWin() {
-  const dispatch = useDispatch();
-  const body = document.querySelector('body');
-  body.style.overflow = 'auto';
-  const ModalLogoutOpen = () => dispatch(isModalLogoutOpen());
-  const ModalLogoutClose = () => dispatch(isModalLogoutClose());
-  const modalLogout = useSelector(getModalLogout);
+  const [modalIsOpen, setIsOpen] = React.useState(false);
 
-  if (modalLogout) {
-    body.style.overflow = 'hidden';
-    console.log('modalLogout', modalLogout);
-  } else {
-    body.style.overflow = 'auto';
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
   }
 
   return (
     <div className={styles.burgerBtn}>
-      <img src={burger} alt="" onClick={ModalLogoutOpen} />
+      <img src={burger} alt="" onClick={openModal} />
 
       <Modal
-        isOpen={modalLogout}
-        onRequestClose={ModalLogoutClose}
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
         className={styles.modalContent}
         overlayClassName={styles.modalOverlay}
+        bodyOpenClassName={styles.overHidden}
         contentLabel="Example Modal"
       >
         <div className={styles.logoPosition}>
@@ -51,7 +42,7 @@ function ModalWin() {
         <div className={classNames(styles['cl-btn-2'])}>
           <div>
             <img
-              onClick={ModalLogoutClose}
+              onClick={closeModal}
               src={burger}
               className={styles.burgerMenu}
               alt=""

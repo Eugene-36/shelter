@@ -29,8 +29,6 @@ Modal.setAppElement('#root');
 function OurPetsCarts() {
   const [state, setState] = useState([]);
 
-  const body = document.querySelector('body');
-  body.style.overflow = 'auto';
   //================================================
   const dispatch = useDispatch();
   useEffect(() => {
@@ -52,13 +50,9 @@ function OurPetsCarts() {
     setState(cart);
   };
 
-  if (state.length > 0) {
-    body.style.overflow = 'hidden';
-  }
   const closeModal = () => {
     setState([]);
     ModalLogoutClose();
-    body.style.overflow = 'auto';
   };
 
   return (
@@ -99,6 +93,7 @@ function OurPetsCarts() {
                   onRequestClose={closeModal}
                   className={s.modalContent}
                   overlayClassName={s.modalOverlay}
+                  bodyOpenClassName={s.overHidden}
                   contentLabel="Example Modal"
                 >
                   <div className={s.logoPosition}>
