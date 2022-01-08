@@ -14,9 +14,7 @@ Modal.setAppElement('#root');
 
 function OurPets() {
   const [modalIsOpen, setIsOpen] = React.useState(false);
-  const body = document.querySelector('body');
 
-  console.log(body);
   function openModal() {
     setIsOpen(true);
   }
@@ -24,7 +22,6 @@ function OurPets() {
   function closeModal() {
     setIsOpen(false);
   }
-  console.log(Boolean(openModal));
 
   return (
     <div className={s.backPets}>
