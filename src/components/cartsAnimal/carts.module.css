@@ -113,6 +113,7 @@ li {
 .arrow {
   margin-top: 5px;
   padding: 10px;
+  cursor: pointer;
 }
 .sectionTitleInfo {
   margin-top: 30px;
