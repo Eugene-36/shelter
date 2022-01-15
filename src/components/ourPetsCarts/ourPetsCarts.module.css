@@ -7,7 +7,9 @@
 .list {
   list-style: none;
 }
-
+.arrow {
+  cursor: pointer;
+}
 .cart {
   /* width: 270px; */
   min-height: 435px;
