@@ -26,7 +26,15 @@ span {
   background: radial-gradient(circle at 25px 15px, #f9eec7, #038681, #1d2626);
   position: relative;
 }
-
+@media (max-width: 320px) {
+  .loading__ball_item {
+    width: 25px;
+    height: 25px;
+  }
+  span {
+    font-size: 1rem;
+  }
+}
 .loading__ball_item:not(:first-child):not(:last-child):before {
   content: '';
   position: absolute;
