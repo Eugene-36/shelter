@@ -1,36 +1,125 @@
-.box {
-  perspective: 200px;
+.common_container {
+  height: 20vh;
   display: flex;
   justify-content: center;
-  /* margin-left: 525px; */
+  align-items: center;
+  flex-direction: column;
+}
+span {
+  color: #1d2626;
 }
 
-/* @media (min-width: 768px) {
-  .box {
-    margin-left: 50px;
-  }
+.loading__ball_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (min-width: 1280px) {
-  .box {
-    perspective: 200px;
-    margin-left: 525px;
-  }
-} */
-
-.plane {
-  width: 5em;
-  height: 5em;
-  background-color: #fc2f70;
-  transform: rotate(0);
-  animation: flip 1s infinite;
+.loading__ball_animate {
+  position: relative;
 }
 
-@keyframes flip {
+.loading__ball_item {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 25px 15px, #f9eec7, #038681, #1d2626);
+  position: relative;
+}
+
+.loading__ball_item:not(:first-child):not(:last-child):before {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  width: 80%;
+  height: 10%;
+  transform: translate(-50%, 0%);
+  background: #00000030;
+  border-radius: 50%;
+  filter: blur(2px);
+}
+
+.loading,
+.first {
+  animation: left 0.5s ease-out infinite alternate;
+}
+
+.loading,
+.last {
+  animation: right 0.5s ease-in infinite alternate;
+}
+
+.loading__ball_shadow {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  width: 80%;
+  height: 10%;
+  transform: translate(-50%, 0%);
+  background: #00000030;
+  border-radius: 50%;
+  filter: blur(2px);
+}
+
+.loading,
+.first_shadow {
+  animation: leftShadow 0.5s ease-out infinite alternate;
+}
+
+.loading,
+.last_shadow {
+  animation: rightShadow 0.5s ease-in 0.5s infinite alternate;
+}
+
+.loading__text {
+  font-size: 24px;
+  margin-top: 30px;
+  color: white;
+  text-transform: uppercase;
+}
+@keyframes left {
+  0%,
   50% {
-    transform: rotateY(180deg);
+    transform: rotate(0) translateX(0);
   }
   100% {
-    transform: rotateY(180deg) rotateX(180deg);
+    transform: rotate(35deg) translateX(-150px);
+  }
+}
+
+@keyframes right {
+  0% {
+    transform: rotate(-35deg) translateX(150px);
+  }
+  50%,
+  100% {
+    transform: rotate(0) translateX(0);
+  }
+}
+
+@keyframes leftShadow {
+  0%,
+  50% {
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background: #00000030;
+  }
+  100% {
+    left: -100%;
+    background: #00000000;
+  }
+}
+
+@keyframes rightShadow {
+  0%,
+  50% {
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background: #00000030;
+  }
+  100% {
+    left: 100%;
+    background: #00000000;
   }
 }
